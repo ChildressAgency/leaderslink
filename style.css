@@ -1,0 +1,121 @@
+/*
+  Template Name: Leaders Link
+  Template Author: The Childress Agency
+  Template Author URI: https://childressagency.com
+  Version: 1.0
+*/
+
+@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=5951a478-81c9-4074-9686-6bf10b635bc3");
+    @font-face{
+        font-family:"Proxima Nova W01_n3";
+        src:url("Fonts/7e90123f-e4a7-4689-b41f-6bcfe331c00a.eot?#iefix") format("eot")
+    }
+    @font-face{
+        font-family:"Proxima Nova W01";
+        src:url("Fonts/7e90123f-e4a7-4689-b41f-6bcfe331c00a.eot?#iefix");
+        src:url("Fonts/7e90123f-e4a7-4689-b41f-6bcfe331c00a.eot?#iefix") format("eot"),url("Fonts/64017d81-9430-4cba-8219-8f5cc28b923e.woff2") format("woff2"),url("Fonts/e56ecb6d-da41-4bd9-982d-2d295bec9ab0.woff") format("woff"),url("Fonts/2aff4f81-3e97-4a83-9e6c-45e33c024796.ttf") format("truetype"),url("Fonts/ab9cd062-380f-4b53-b1a7-c0bec7402235.svg#ab9cd062-380f-4b53-b1a7-c0bec7402235") format("svg");
+font-weight: 300;
+font-style: normal;
+    }
+    @font-face{
+        font-family:"Proxima Nova W01_n5";
+        src:url("Fonts/fbc6b03a-b3a1-427c-a884-053deca3a53c.eot?#iefix") format("eot")
+    }
+    @font-face{
+        font-family:"Proxima Nova W01";
+        src:url("Fonts/fbc6b03a-b3a1-427c-a884-053deca3a53c.eot?#iefix");
+        src:url("Fonts/fbc6b03a-b3a1-427c-a884-053deca3a53c.eot?#iefix") format("eot"),url("Fonts/0d416408-95c6-4ad7-b08d-e60573d3b37d.woff2") format("woff2"),url("Fonts/d999c07b-a049-4eb5-b8a6-4f36ae25e67e.woff") format("woff"),url("Fonts/4d4a75f5-d32a-4a09-8665-133afd39cc37.ttf") format("truetype"),url("Fonts/8152bc4e-d700-4c78-b6be-326893e6f53f.svg#8152bc4e-d700-4c78-b6be-326893e6f53f") format("svg");
+font-weight: 500;
+font-style: normal;
+    }
+    @font-face{
+        font-family:"Proxima Nova W01_n7";
+        src:url("Fonts/9b05cd3b-19d8-496a-816b-8de46cf24af1.eot?#iefix") format("eot")
+    }
+    @font-face{
+        font-family:"Proxima Nova W01";
+        src:url("Fonts/9b05cd3b-19d8-496a-816b-8de46cf24af1.eot?#iefix");
+        src:url("Fonts/9b05cd3b-19d8-496a-816b-8de46cf24af1.eot?#iefix") format("eot"),url("Fonts/a086d1e1-d71a-4248-bc5b-6a91bbda0756.woff2") format("woff2"),url("Fonts/43106d4c-07a9-48c0-bdeb-d82f359c85f5.woff") format("woff"),url("Fonts/7783372a-b74a-4eb3-902f-ab18b106eb46.ttf") format("truetype"),url("Fonts/22e79766-6290-47c1-b1af-93665675dd48.svg#22e79766-6290-47c1-b1af-93665675dd48") format("svg");
+font-weight: 700;
+font-style: normal;
+    }
+
+body{
+  font-family:"Proxima Nova W01", sans-serif;
+}
+p{
+  font-size:16px;
+}
+h1{
+  font-size:36px;
+  color:#267fae;
+  font-weight:500;
+  text-transform:capitalize;
+  font-variant:small-caps;
+  margin-top:0;
+  margin-bottom:0;
+}
+h1>span{
+  color:#ed0000;
+}
+
+.btn-main{
+  display:inline-block;
+  color:#55acee;
+  font-size:18px;
+  font-weight:500;
+  border:1px solid #5c9fc2;
+  -webkit-transition:all .3s ease;
+  transition:all .3s ease;
+}
+.btn-main:hover,
+.btn-main:focus{
+  color:#fff;
+  background-color:#55acee;
+  text-decoration:none;
+}
+
+#header-nav{
+  background-color:#267fae;
+  border-bottom:2px solid #6e7375;
+}
+#header-nav .navbar-header{
+  margin-left:-15px;
+  padding:15px;
+  background-color:#fff;
+}
+.header-donate{
+  float:right;
+}
+.navbar-nav>li>a{
+  color:#fff;
+  text-transform:uppercase;
+  font-size:18px;
+  font-weight:500;
+}
+.navbar-nav>li>a:hover,
+.navbar-nav>li>a:focus{
+  background-color:transparent;
+  color:#dadada;
+}
+
+
+@media (min-width:768px){
+  .container-sm-height{
+    display:table;
+  }
+  .row-sm-height{
+    display:table-row;
+  }
+  .col-sm-height{
+    display:table-cell;
+    float:none;
+    vertical-align:middle;
+  }
+  #getInvolved .container-fluid{
+    margin-left:0;
+    margin-right:0;
+    padding-left:0;
+    padding-right:0;
+  }
+}
