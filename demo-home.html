@@ -31,7 +31,7 @@
       <div class="container-fluid">
         <div class="navbar-header">
           <a href="#" class="header-logo"><img src="images/logo-white-bg.png" class="img-responsive" alt="Leaders Link Logo" /></a>
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navar" aria-expanded="expanded" aria-controls="navbar">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="expanded" aria-controls="navbar">
             <span class="sr-only">Toggle Navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -44,7 +44,7 @@
           </div>
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Get Involved</a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Get Involved<i class="fa fa-caret-down"></i></a>
               <ul class="dropdown-menu">
                 <li><a href="#">Elected Officials</a></li>
                 <li><a href="#">Disaster Experts</a></li>
@@ -52,7 +52,7 @@
               </ul>
             </li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Resources</a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Resources<i class="fa fa-caret-down"></i></a>
               <ul class="dropdown-menu">
                 <li><a href="#">Expert Advice</a></li>
                 <li><a href="#">Resource Hub</a></li>
@@ -60,7 +60,7 @@
               </ul>
             </li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us</a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us<i class="fa fa-caret-down"></i></a>
               <ul class="dropdown-menu">
                 <li><a href="#">Our Team</a></li>
                 <li><a href="#">Our Partners</a></li>
@@ -73,16 +73,18 @@
       </div>
     </nav>
     <section class="hp-hero parallax-window" data-parallax="scroll" data-image-src="images/water-rescue-child.jpg">
-      <div class="hero-overlay"></div>
-      <div class="caption-wrapper">
-        <div class="caption">
-          <p>Linking Leaders to make communities safer from disasters</p>
+      <div class="container">
+        <div class="caption-wrapper">
+          <div class="caption">
+            <p>Linking Leaders <span>to make</span> <span>communities safer</span> <span>from disasters</span></p>
+          </div>
         </div>
       </div>
-      <div class="hero-caption">
-        <p>Small caption of where the photo is from and who is in it (editable when hero image changes)</p>
-      </div>
+      <div class="overlay"></div>
     </section>
+    <div class="hero-caption">
+      <p>Small caption of where the photo is from and who is in it (editable when hero image changes)</p>
+    </div>
     <main id="hp-main">
       <section id="intro">
         <div class="container">
@@ -94,7 +96,7 @@
             </div>
             <div class="col-sm-7">
               <div class="video">
-                <img src="images/video-placeholder.jpg" class="img-responsive center-block" alt="Video" />
+                <img src="images/video-placeholder.png" class="img-responsive center-block" alt="Video" />
               </div>
             </div>
           </div>
@@ -111,8 +113,7 @@
                 <a href="#" class="btn-main">Take Action</a>
               </div>
             </div>
-            <div class="col-sm-6 col-sm-height" style="background-image:url(images/elected-officials-restaurant.jpg);">
-              <div class="image-side"></div>
+            <div class="col-sm-6 col-sm-height image-side" style="background-image:url(images/elected-officials-restaurant.jpg);">
             </div>
           </div>
           <div class="row row-sm-height">
@@ -123,8 +124,7 @@
                 <a href="#" class="btn-main">Share Your Expertise</a>
               </div>
             </div>
-            <div class="col-sm-6 col-sm-height col-sm-pull-6" style="background-image:url(images/dmat-team.jpg);">
-              <div class="image-side"></div>
+            <div class="col-sm-6 col-sm-height col-sm-pull-6 image-side" style="background-image:url(images/dmat-team.jpg);">
             </div>
           </div>
           <div class="row row-sm-height">
@@ -132,11 +132,10 @@
               <div class="text-side">
                 <h2>Supporters</h2>
                 <p>Thank you for considering a donation to LeadersLink! Your contribution is an investment in making our communities more prepared for crisis and disaster and helping them recover more quickly. If you're an individual, <a href="#">click here</a> to make a tax-deductible donation. If you are a company, organization or foundation and would like to sponsor our work, please <a href="#">click here</a>. Thanks to your support, we can create a new culture of preparedness!</p>
-                <a href="#" class="btn-alt">Donate Now</a>
+                <a href="#" class="btn-main btn-red">Donate Now</a>
               </div>
             </div>
-            <div class="col-sm-6 col-sm-height" style="background-image:url(images/supporters-breaking-ground.jpg);">
-              <div class="image-side"></div>
+            <div class="col-sm-6 col-sm-height image-side" style="background-image:url(images/supporters-breaking-ground.jpg);">
             </div>
           </div>
         </div>
@@ -144,7 +143,7 @@
       <section id="factoid">
         <div class="container">
           <div class="media">
-            <div class="media-left">
+            <div class="media-left media-middle">
               <img src="images/2x-icon.png" class="media-object" alt="2x icon" />
             </div>
             <div class="media-body">
@@ -156,9 +155,8 @@
       <section id="sliderBar">
         <ul class="slider-bar">
           <li>
-            <div class="img-wrapper">
+            <div class="img-wrapper" style="background-image:url(images/new-jersey-ribbon-cutting.jpg">
               <div class="overlay"></div>
-              <img src="images/new-jersey-ribbon-cutting.jpg" alt="" />
               <h3 class="slide-title">In the press</h3>
             </div>
             <div class="caption">
@@ -167,9 +165,8 @@
             <a href="#" class="btn-main btn-white">View Press Articles</a>
           </li>
           <li>
-            <div class="img-wrapper">
+            <div class="img-wrapper" style="background-image:url(images/fatigues-carrying-sandbag.jpg);">
               <div class="overlay"></div>
-              <img src="images/fatigues-carrying-sandbag.jpg" alt="" />
               <h3 class="slide-title">Expert Advice</h3>
             </div>
             <div class="caption">
@@ -178,9 +175,8 @@
             <a href="#" class="btn-main btn-white">Start Helping Today!</a>
           </li>
           <li>
-            <div class="img-wrapper">
+            <div class="img-wrapper" style="background-image:url(images/pointing-striped-shirt.jpg);">
               <div class="overlay"></div>
-              <img src="images/pointing-striped-shirt.jpg" alt="" />
               <h3 class="slide-title">Leadership Videos</h3>
             </div>
             <div class="caption">
@@ -189,9 +185,8 @@
             <a href="#" class="btn-main btn-white">View Videos</a>
           </li>
           <li>
-            <div class="img-wrapper">
+            <div class="img-wrapper" style="background-image:url(images/people-in-flooded-street.jpg);">
               <div class="overlay"></div>
-              <img src="images/people-in-flooded-street.jpg" alt="" />
               <h3 class="slide-title">Resource Hub</h3>
             </div>
             <div class="caption">
@@ -200,9 +195,8 @@
             <a href="#" class="btn-main btn-white">View Resources</a>
           </li>
           <li>
-            <div class="img-wrapper">
+            <div class="img-wrapper" style="background-image:url(images/loading-stuff-on-helicopter.jpg);">
               <div class="overlay"></div>
-              <img src="images/loading-stuff-on-helicopter.jpg" alt="" />
               <h3 class="slide-title">About Us</h3>
             </div>
             <div class="caption">
@@ -213,21 +207,41 @@
         </ul>
       </section>
     </main>
-    <section id="testimonials" class="parallax-window" data-parallax="scroll" data-image-src="images/sandbag-closeup.jpg">
+    <section id="testimonials" class="parallax-window" data-parallax="scroll" data-image-src="images/sandbags-closeup.jpg" data-natural-height="355px" data-position="left top">
       <div class="overlay"></div>
       <div class="container">
         <ul id="testimonialSlider">
           <li>
-            <p class="testimonial">"There's a lot of people that sit back and say 'oh my God. What am I going to do?'. At times, you just need someone to talk to about what you need to be doing next."</p>
-            <p class="testimonial-author">- Mayor Gregg Kennedy / Smithville, MS</p>
+            <p class="testimonial">"It's a great idea. The lessons learned and experiences gained through a disaster are so helpful to instruct or guide people. It's just so valuable that experience, and so helpful. There's an art to this."</p>
+            <p class="testimonial-author">Mayor Joe Riley / Charleston, SC</p>
+          </li>
+          <li>
+            <p class="testimonial">"I would love to have had someone saying 'for the next 3 weeks here's what you need to focus on'. That would have really helped me avoid some of the mistakes we made. There really wasn't a lot of information passed on to us about what was coming in the weeks and months ahead. I remember pulling articles from the Gulf Coast and New Orleans. We did our best to anticipate a lot of issues."</p>
+            <p class="testimonial-author">Mayor Walter Maddox / Tuscaloosa, AL</p>
+          </li>
+          <li>
+            <p class="testimonial">"A website would be really helpful. The ability to link to somebody, talk to somebody in a city of 10,000 or 300,000. There is just some consolation to hearing affirmation. Truthfully, the emotional support means a lot."</p>
+            <p class="testimonial-author">Mayor Ted Ellis / Bluffton, IN / Former Pres., National League of Cities</p>
           </li>
           <li>
             <p class="testimonial">"There's a lot of people that sit back and say 'oh my God. What am I going to do?'. At times, you just need someone to talk to about what you need to be doing next."</p>
             <p class="testimonial-author">- Mayor Gregg Kennedy / Smithville, MS</p>
           </li>
           <li>
-            <p class="testimonial">"There's a lot of people that sit back and say 'oh my God. What am I going to do?'. At times, you just need someone to talk to about what you need to be doing next."</p>
-            <p class="testimonial-author">- Mayor Gregg Kennedy / Smithville, MS</p>
+            <p class="testimonial">"You're going to get the first call. So you'd better have some answers. You have five minutes! You need to know what you're going to do."</p>
+            <p class="testimonial-author">Mayor Harry Lewis / Rayville, LA</p>
+          </li>
+          <li>
+            <p class="testimonial">"If we keep educating folks - however it needs to be done - but if we can keep educating and letting them know what we know now and wished we had known back then, I think we'll all be better off."</p>
+            <p class="testimonial-author">Mayor Eddie Favre / Bay St. Louis, MS</p>
+          </li>
+          <li>
+            <p class="testimonial">"I think it's very important. It gives us an opportunity to take lessons learned and mistakes made and pass them forward and help people make the right decisions and keep from making the wrong ones."</p>
+            <p class="testimonial-author">Mayor Brent Warr / Gulfport, MS</p>
+          </li>
+          <li>
+            <p class="testimonial">"Anytime you tap on experience, that's a whole lot better a lot of times than a bunch of books. If you have somebody that lived it say, this is what you need to do. Especially if it worked out."</p>
+            <p class="testimonial-author">Mayor Billy Skellie / Long Beach, MS</p>
           </li>
         </ul>
       </div>
@@ -236,8 +250,10 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-6">
-            <h1>Stay Informed</h1>
-            <p>Get periodic updates and alerts</p>
+            <div class="stay-informed">
+              <h1>Stay Informed</h1>
+              <p>GET PERIODIC UPDATES AND ALERTS</p>
+            </div>
           </div>
           <div class="col-sm-6">
             <form class="signup-form">
@@ -276,7 +292,7 @@
             </a>
           </div>
           <div class="col-sm-6">
-            <ul class="list-unstyled list-inline">
+            <ul class="list-unstyled list-inline footer-nav">
               <li>
                 <h4>Get Involved</h4>
                 <ul>
@@ -316,6 +332,10 @@
               <a href="#"><i class="fa fa-linkedin"></i></a>
             </div>
           </div>
+        </div>
+        <div class="colophon">
+          <p>&copy2017 LeadersLink</p>
+          <p>website created by <a href="#">The Childress Agency</a></p>
         </div>
       </div>
     </footer>
