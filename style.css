@@ -65,6 +65,7 @@ h1>span{
 a{
   color:#000;
   font-weight:500;
+  font-size:16px;
 }
 a:hover,
 a:focus{
@@ -338,25 +339,37 @@ a:focus{
 }
 
 #sliderBar .img-wrapper{
-  display:table;
+  overflow:hidden;
+  position:relative;
+}
+#sliderBar .img-inner{
   width:100%;
   min-height:320px;
   background-repeat:no-repeat;
   background-size:cover;
   position:relative;
+  -webkit-transition:all .3s ease;
+  transition:all .3s ease;
 }
-#sliderBar .img-wrapper>.slide-title{
-  display:table-cell;
-  vertical-align:middle;
-  position:relative;
+#sliderBar .img-inner:hover{
+  -ms-transform:scale(1.2);
+  -webkit-transform:scale(1.2);
+  transform:scale(1.2);
+}
+#sliderBar .slide-title{
+  position:absolute;
   z-index:2;
-  margin-top:0;
-  margin-bottom:0;
   color:#fff;
   text-align:center;
   font-size:36px;
   font-variant:small-caps;
   letter-spacing:6px;
+  margin:auto;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  height:38px;
 }
 #sliderBar .slider-bar>li{
   background-color:#267fae;
@@ -607,6 +620,98 @@ footer{
 #electedOfficials .text-side,
 #electedOfficials .image-side{
   margin-top:40px;
+}
+
+#latestArticles{
+  padding-top:40px;
+  padding-bottom:60px;
+}
+#latestArticles .sorting{
+  float:right;
+}
+#latestArticles .sorting>select{
+  font-size:18px;
+  color:#267fae;
+  border-color:#3a5a99;
+}
+#latestArticles .sorting>select>option{
+  font-weight:300;
+}
+.blog-summary{
+  margin-top:60px;
+  max-width:325px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.blog-summary h2{
+  font-size:26px;
+  color:#267fae;
+  font-weight:500;
+  font-variant:small-caps;
+}
+.blog-summary p{
+  display:inline;
+}
+.blog-summary a{
+  color:#55acee;
+  font-style:italic;
+  font-weight:300;
+}
+
+/*
+Default style for WP-PageNavi plugin
+http://wordpress.org/extend/plugins/wp-pagenavi/
+*/
+.wp-pagenavi {
+	clear: both;
+}
+.wp-pagenavi a, .wp-pagenavi span {
+	text-decoration: none;
+	border: 1px solid #BFBFBF;
+	padding: 3px 5px;
+	margin: 2px;
+}
+.wp-pagenavi a:hover, .wp-pagenavi span.current {
+	border-color: #000;
+}
+.wp-pagenavi span.current {
+	font-weight: bold;
+}
+/***** end default wp-pagenavi styles ******/
+
+.wp-pagenavi{
+  text-align:center;
+  margin-top:60px;
+}
+.wp-pagenavi span.pages{
+  display:none;
+}
+.wp-pagenavi a,
+.wp-pagenavi span{
+  color:#55acee;
+  border-color:#3a5a99;
+  font-weight:300;
+}
+.wp-pagenavi span.current{
+  font-weight:500;
+}
+.wp-pagenavi .first,
+.wp-pagenavi .previouspostslink,
+.wp-pagenavi .nextpostslink,
+.wp-pagenavi .last{
+  font-size:30px;
+  font-weight:700;
+  vertical-align:middle;
+  border:none;
+}
+.wp-pagenavi .page{
+  padding:3px 12px;
+  vertical-align:middle;
+}
+.wp-pagenavi .current,
+.wp-pagenavi .extend{
+  padding:4px 12px;
+  vertical-align: middle;
 }
 
 
