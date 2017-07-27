@@ -90,27 +90,39 @@ h1>span{
   background-color:#ed0000;
   text-decoration:none;
 }
-.btn-main.btn-white{
+.btn-main.btn-blue{
   color:#fff;
   background-color:#267fae;
   border-color:#fff;
 }
-.btn-main.btn-white:hover,
-.btn-main.btn-white:focus{
+.btn-main.btn-blue:hover,
+.btn-main.btn-blue:focus{
   color:#fff;
   background-color:#3a5a99;
   text-decoration:none;
 }
-.btn-main.btn-blue{
+.btn-main.btn-marine{
   color:#fff;
   background-color:#3a5a99;
   border-color:#3a5a99;
 }
-.btn-main.btn-blue:hover,
-.btn-main.btn-blue:focus{
-  color:#3a5a99;
+.btn-main.btn-marine:hover,
+.btn-main.btn-marine:focus{
+  color:#fff;
   text-decoration:none;
-  background-color:#fff;
+  background-color:#267fae;
+  border-color:#267fae;
+}
+.btn-main.btn-clear{
+  color:#fff;
+  background-color:transparent;
+  border-color:#fff;
+}
+.btn-main.btn-clear:hover,
+.btn-main.btn-clear:focus{
+  color:#fff;
+  background-color:#3a5a99;
+  border-color:#fff;
 }
 
 #header-nav{
@@ -223,7 +235,6 @@ h1>span{
 .hp-hero .caption>p{
   font-size:56px;
   color:#fff;
-  text-transform:capitalize;
   font-variant:small-caps;
   font-weight:500;
   letter-spacing:6px;
@@ -280,7 +291,6 @@ h1>span{
   font-size:36px;
   font-weight:500;
   color:#267fae;
-  text-transform:capitalize;
   font-variant:small-caps;
   text-align:center;
   border-bottom:1px solid #5c9fc2;
@@ -297,7 +307,6 @@ h1>span{
 #factoid .media-body>h3{
   font-size:30px;
   font-weight:500;
-  text-transform:capitalize;
   font-variant:small-caps;
   color:#fff;
 }
@@ -323,7 +332,6 @@ h1>span{
   color:#fff;
   text-align:center;
   font-size:36px;
-  text-transform:capitalize;
   font-variant:small-caps;
   letter-spacing:6px;
 }
@@ -428,17 +436,51 @@ footer{
   margin-right:10px;
 }
 
-.colophon{
+.copyright{
   margin-top:25px;
 }
-.colophon>p{
+.copyright>p{
   font-size:14px;
   text-align:center;
   color:#fff;
   margin-bottom:0;
 }
-.colophon a{
+.copyright a{
   color:#fff;
+}
+
+#aboutInfo{
+  margin-top:60px;
+}
+#aboutInfo .text-side,
+#aboutInfo .image-side{
+  margin-top:40px;
+  text-align:center;
+}
+#aboutInfo .text-side>h2{
+  font-size:36px;
+  font-weight:500;
+  color:#267fae;
+  font-variant:small-caps;
+  margin-top:0;
+}
+
+#foundedExperience{
+  background-color:#4d4d4d;
+  margin-top:60px;
+  padding-top:40px;
+  padding-bottom:40px;
+  color:#fff;
+  text-align:center;
+}
+#foundedExperience h2{
+  font-size:36px;
+  font-weight:500;
+  font-variant:small-caps;
+  margin-top:0;
+}
+#foundedExperience .btn-main{
+  margin-top:40px;
 }
 
 
