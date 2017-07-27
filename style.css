@@ -62,6 +62,15 @@ h1>span{
   color:#ed0000;
 }
 
+a{
+  color:#000;
+  font-weight:500;
+}
+a:hover,
+a:focus{
+  color:#000;
+  text-decoration:underline;
+}
 .btn-main{
   display:inline-block;
   color:#55acee;
@@ -304,19 +313,28 @@ h1>span{
   margin-top:20px;
 }
 
-#factoid{
+#greyCallout{
   background-color:#4d4d4d;
   padding-top:25px;
   padding-bottom:25px;
+  text-align:center;
 }
-#factoid .media-body>h3{
+#greyCallout h3{
   font-size:30px;
   font-weight:500;
   font-variant:small-caps;
   color:#fff;
 }
-#factoid .media-body>h3>span{
+#greyCallout .media-body{
+  text-align:left;
+}
+#greyCallout h3>span{
   color:#ed0000;
+}
+#greyCallout .btn-main{
+  margin-top:25px;
+  padding-left:60px;
+  padding-right:60px;
 }
 
 #sliderBar .img-wrapper{
@@ -566,13 +584,13 @@ footer{
   padding-top:40px;
   padding-bottom:60px;
 }
-#expertsSignup .intro{
+.page-intro{
   text-align:center;
   max-width:650px;
   margin-left:auto;
   margin-right:auto;
 }
-#expertsSignup .intro>h1{
+.page-intro>h1{
   margin-bottom:25px;
 }
 .expert-signup-form{
@@ -580,6 +598,15 @@ footer{
   max-width:450px;
   margin-left:auto;
   margin-right:auto;
+}
+
+#electedOfficials{
+  padding-top:40px;
+  padding-bottom:60px;
+}
+#electedOfficials .text-side,
+#electedOfficials .image-side{
+  margin-top:40px;
 }
 
 
@@ -609,7 +636,7 @@ footer{
   #getInvolved .image-side{
     margin-top:25px;
   }
-  #factoid .media-left{
+  #greyCallout .media-left{
     display:block;
   }
   #testimonials{
@@ -622,6 +649,8 @@ footer{
 @media (min-width:768px){
   .container-sm-height{
     display:table;
+  }
+  .container-fluid.container-sm-height{
     width:100%;
   }
   .row-sm-height{
