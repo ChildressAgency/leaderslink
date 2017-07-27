@@ -54,7 +54,6 @@ h1{
   font-size:36px;
   color:#267fae;
   font-weight:500;
-  text-transform:capitalize;
   font-variant:small-caps;
   margin-top:0;
   margin-bottom:0;
@@ -481,6 +480,48 @@ footer{
 }
 #foundedExperience .btn-main{
   margin-top:40px;
+}
+
+#contactUs{
+  text-align:center;
+  padding-top:40px;
+  padding-bottom:60px;
+}
+#contactUs .contact-info{
+  margin-top:40px;
+}
+#contactUs .contact-info+.contact-info{
+  margin-top:80px;
+}
+#contactUs .contact-form{
+  margin-top:40px;
+}
+#contactUs h2{
+  font-size:18px;
+  font-weight:500px;
+  color:#55acee;
+  margin-top:0;
+}
+#contactUs .contact-form>h2{
+  margin-bottom:40px;
+}
+#contactUs .contact-form .btn-marine{
+  float:right;
+  padding-left:60px;
+  padding-right:60px;
+}
+#contactUs .social-links .fa{
+  font-size:35px;
+  color:#000;
+  -webkit-transition:color .3s ease;
+  transition:color .3s ease;
+}
+#contactUs .social-links a+a{
+  margin-left:15px;
+}
+#contactUs .social-links .fa:hover,
+#contactUs .social-links .fa:focus{
+  color:#55acee;
 }
 
 
