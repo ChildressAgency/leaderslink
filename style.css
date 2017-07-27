@@ -213,17 +213,17 @@ h1>span{
   transform:rotate(180deg);
 }
 
-.hp-hero{
-  min-height:560px;
+.hero{
+  min-height:350px;
   position:relative;
 }
-.hp-hero .caption-wrapper{
-  min-height:560px;
+.hero .caption-wrapper{
+  min-height:350px;
   display:table;
   height:100%;
   width:100%;
 }
-.hp-hero .caption{
+.hero .caption{
   display:table-cell;
   vertical-align:middle;
   position:relative;
@@ -231,12 +231,18 @@ h1>span{
   padding-left:15px;
   padding-right:15px;
 }
-.hp-hero .caption>p{
+.hero .caption>p{
   font-size:56px;
   color:#fff;
   font-variant:small-caps;
   font-weight:500;
   letter-spacing:6px;
+}
+.hero.hp-hero{
+  min-height:560px;
+}
+.hero.hp-hero .caption-wrapper{
+  min-height:560px;
 }
 .hero-caption{
   width:100%;
@@ -493,19 +499,19 @@ footer{
 #contactUs .contact-info+.contact-info{
   margin-top:80px;
 }
-#contactUs .contact-form{
+.contact-form{
   margin-top:40px;
 }
-#contactUs h2{
+.contact-form>h2{
   font-size:18px;
   font-weight:500px;
   color:#55acee;
   margin-top:0;
 }
-#contactUs .contact-form>h2{
+.contact-form>h2{
   margin-bottom:40px;
 }
-#contactUs .contact-form .btn-marine{
+.contact-form .btn-marine{
   float:right;
   padding-left:60px;
   padding-right:60px;
@@ -523,28 +529,28 @@ footer{
 #contactUs .social-links .fa:focus{
   color:#55acee;
 }
-#contactUs .wpcf7-radio{
+.wpcf7-radio{
   display:block;
   text-align:left;
 }
-#contactUs .wpcf7-list-item{
+.wpcf7-radio .wpcf7-list-item{
   display:inline-block;
   margin-right:15px;
 }
-#contactUs .wpcf7-list-item>label{
+.wpcf7-radio .wpcf7-list-item>label{
   font-size:16px;
   font-weight:300;
   color:#666;
 }
-#contactUs .wpcf7-radio input[type="radio"]{
+.wpcf7-radio input[type="radio"]{
   opacity:0;
   position:absolute;
 }
-#contactUs .wpcf7-radio .wpcf7-list-item-label{
+.wpcf7-radio .wpcf7-list-item-label{
   padding-left:30px;
   position:relative;
 }
-#contactUs .wpcf7-radio .wpcf7-list-item-label:before{
+.wpcf7-radio .wpcf7-list-item-label:before{
   content:"";
   position:absolute;
   height:23px;
@@ -552,10 +558,29 @@ footer{
   background-image:url(images/radio-buttons.png);
   left:0px;
 }
-#contactUs .wpcf7-radio input[type="radio"]:checked + .wpcf7-list-item-label:before{
+.wpcf7-radio input[type="radio"]:checked + .wpcf7-list-item-label:before{
   background-position:-24px 0;
 }
 
+#expertsSignup{
+  padding-top:40px;
+  padding-bottom:60px;
+}
+#expertsSignup .intro{
+  text-align:center;
+  max-width:650px;
+  margin-left:auto;
+  margin-right:auto;
+}
+#expertsSignup .intro>h1{
+  margin-bottom:25px;
+}
+.expert-signup-form{
+  text-align:center;
+  max-width:450px;
+  margin-left:auto;
+  margin-right:auto;
+}
 
 
 @media (max-width:767px){
@@ -572,7 +597,7 @@ footer{
   #navbar .navbar-right{
     padding-top:0;
   }
-  .hp-hero .caption>p{
+  .hero .caption>p{
     font-size:44px;
     letter-spacing:0px;
     line-height:1em;
@@ -657,16 +682,16 @@ footer{
   .dropdown-menu>li{
     display:inline-block;
   }
-  .hp-hero .caption>p>span{
+  .hero .caption>p>span{
     display:block;
   }
-  .hp-hero .caption>p>span:nth-child(1){
+  .hero .caption>p>span:nth-child(1){
     margin-left:5%;
   }
-  .hp-hero .caption>p>span:nth-child(2){
+  .hero .caption>p>span:nth-child(2){
     margin-left:10%;
   }
-  .hp-hero .caption>p>span:nth-child(3){
+  .hero .caption>p>span:nth-child(3){
     margin-left:15%;
   }
 }
