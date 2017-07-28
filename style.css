@@ -714,6 +714,78 @@ http://wordpress.org/extend/plugins/wp-pagenavi/
   vertical-align: middle;
 }
 
+.question-summary{
+  border-bottom:2px solid #b2b2b2;
+  padding-left:10px;
+  padding-bottom:10px;
+}
+.question-summary>h2{
+  font-size:28px;
+  font-weight:500;
+  color:#267fae;
+}
+.question-meta{
+  font-size:14px;
+  font-weight:500;
+  color:#4d4d4d;
+}
+.question-meta>a{
+  color:#4d4d4d;
+  font-size:14px;
+}
+.question-meta>a:hover{
+  color:#4d4d4d;
+  text-decoration:underline;
+}
+.question-meta>span{
+  font-weight:300;
+}
+.question-summary .media-body p{
+  display:inline;
+}
+.question-summary .media-body a.read-more{
+  font-weight:300;
+  color:#267fae;
+  font-style:italic;
+}
+
+/* some default sidebar styles */
+.ap-widget-pos{
+  margin-bottom:25px;
+}
+.widget.buddypress .bp-login-widget-user-avatar{
+  float:left;
+}
+.bp-login-widget-user-avatar img.avatar{
+  height:40px;
+  width:40px;
+}
+.widget.buddypress .bp-login-widget-user-links>div{
+  padding-left:60px;
+  margin-bottom:.5rem;
+}
+
+/* end default sidebar styles */
+
+.sidebar .widget_bp_core_login_widget>.ap-widget-title{
+  font-size:24px;
+  text-transform:uppercase;
+  font-weight:500;
+  color:#267fae;
+  margin-top:0;
+  text-align:center;
+}
+.sidebar .widget_bp_core_login_widget form#bp-login-widget-form>label{
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  border:0;
+}
+
 
 @media (max-width:767px){
   body{
