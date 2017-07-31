@@ -743,7 +743,7 @@ http://wordpress.org/extend/plugins/wp-pagenavi/
 .question-summary .media-body p{
   display:inline;
 }
-.question-summary .media-body a.read-more{
+a.read-more{
   font-weight:300;
   color:#267fae;
   font-style:italic;
@@ -771,6 +771,35 @@ http://wordpress.org/extend/plugins/wp-pagenavi/
   overflow:hidden;
   clip:rect(0,0,0,0);
   border:0;
+}
+
+.project-map{
+  margin-top:40px;
+}
+#connectedList{
+  margin-top:40px;
+  padding-bottom:40px;
+}
+#connectedList ul{
+  margin-top:40px;
+}
+#connectedList ul>li{
+  margin-bottom:40px;
+}
+#connectedList ul>li>h3{
+  font-size:20px;
+  font-weight:500px;
+  text-transform:uppercase;
+  margin-top:0;
+}
+#connectedList ul>li>h3>span{
+  font-size:15px;
+  font-weight:300;
+  text-transform:uppercase;
+  display:block;
+}
+#connectedList ul>li>p{
+  display:inline;
 }
 
 
@@ -886,6 +915,9 @@ http://wordpress.org/extend/plugins/wp-pagenavi/
   }
   .hero .caption>p>span:nth-child(3){
     margin-left:15%;
+  }
+  #connectedList ul{
+    column-count:2;
   }
 }
 @media (min-width:768px) and (max-width:991px){
