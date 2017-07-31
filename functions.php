@@ -304,3 +304,54 @@ if(function_exists('acf_add_options_page')){
 		'parent_slug' => 'global-settings'
 	));  
 }
+
+add_action('init', 'leaderslink_create_post_types');
+function leaderslink_create_post_types(){
+  $expert_advice_labels = array(
+    'name' => 'Expert Advice Articles',
+    'singular_name' => 'Expert Advice Article',
+    'menu_name' => 'Expert Advice Articles',
+    'add_new_item' => 'Add New Article',
+    'search_items' => 'Search Articles',
+    'edit_item' => 'Edit Article',
+    'view_item' => 'View Article',
+    'all_items' => 'All Articles'
+    'new_item' => 'New Expert Advice Article',
+    'not_found' => 'Article Not Found'
+  );
+  $expert_advice_args = array(
+    'labels' => $expert_advice_labels,
+    'capability_type' => 'post',
+    'public' => true,
+    'menu_position' => 5,
+    'query_var' => 'expert_advice_article',
+    'supports' => array(
+      'title', 
+      'editor', 
+      'custom_fields', 
+      'comments', 
+      'revisions',
+      'author');
+  );
+  register_post_type('expert_advice_article');
+
+  register_taxonomy('article_categories',
+    'expert_advice_article',
+    array(
+      'hierarchical' => true,
+      'labels' => array(
+        'name' => 'Expert Advice Article Categories',
+        'singular_name' => 'Article Category',
+        'menu_name' => 'Expert Advice Article Categories',
+        'all_items' => 'All Article Categories',
+        'edit_item' => 'Edit Article Category',
+        'view_item' => 'View Article Category',
+        'update_item' => 'Update Article Category',
+        'add_new_tem' => 'Add New Article Category',
+        'new_item_name' => 'New Article Category',
+        'search_items' => 'Search Article Categories',
+        'not_found' => 'Article Category Not Found'
+      )
+    )
+  );
+}

@@ -644,12 +644,12 @@ footer{
 #latestArticles .sorting{
   float:right;
 }
-#latestArticles .sorting>select{
+#latestArticles .sorting select{
   font-size:18px;
   color:#267fae;
   border-color:#3a5a99;
 }
-#latestArticles .sorting>select>option{
+#latestArticles .sorting select>option{
   font-weight:300;
 }
 .blog-summary{
