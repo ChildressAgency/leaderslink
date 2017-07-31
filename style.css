@@ -394,6 +394,7 @@ a:focus{
 #testimonials>.container{
   display:table-cell;
   height:100%;
+  width:100%;
   vertical-align:middle;
 }
 #testimonials .lSSlideOuter{
@@ -800,6 +801,44 @@ a.read-more{
 }
 #connectedList ul>li>p{
   display:inline;
+}
+.shop-title{
+  font-size:60px;
+  margin-top:25px;
+  margin-bottom:25px;
+}
+.shop-title+hr{
+  border-color:#4d4d4d;
+}
+#products{
+  padding-bottom:40px;
+}
+#products>h2{
+  font-size:36px;
+  font-weight:500;
+  color:#267fae;
+  font-variant:small-caps;
+  margin-top:40px;
+}
+.product-block{
+  margin-top:40px;
+  text-align:center;
+  max-width:325px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.product-block h3{
+  font-size:26px;
+  font-weight:500;
+  color:#267fae;
+  font-variant:small-caps;
+  text-align:left;
+}
+.product-block p{
+  text-align:left;
+}
+.product-block .btn-main{
+  margin-top:25px;
 }
 
 
