@@ -223,6 +223,8 @@ a:focus{
   transform:rotate(180deg);
 }
 
+
+
 .hero{
   min-height:350px;
   position:relative;
@@ -270,6 +272,18 @@ a:focus{
   height:100%;
   width:100%;
   top:0;
+  background: rgba(0,0,0,0.75);
+  background: -moz-linear-gradient(left, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.65) 17%, rgba(0,0,0,0.22) 86%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,0,0,0.75)), color-stop(0%, rgba(0,0,0,0.75)), color-stop(17%, rgba(0,0,0,0.65)), color-stop(86%, rgba(0,0,0,0.22)));
+  background: -webkit-linear-gradient(left, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.65) 17%, rgba(0,0,0,0.22) 86%);
+  background: -o-linear-gradient(left, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.65) 17%, rgba(0,0,0,0.22) 86%);
+  background: -ms-linear-gradient(left, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.65) 17%, rgba(0,0,0,0.22) 86%);
+  background: linear-gradient(to right, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.65) 17%, rgba(0,0,0,0.22) 86%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=1 );
+}
+.img-wrapper .img-inner>.overlay,
+#testimonials>.overlay{
+  background:transparent;
   background-color:rgba(0,0,0,.3);
 }
 
@@ -807,7 +821,7 @@ a.read-more{
   margin-top:25px;
   margin-bottom:25px;
 }
-.shop-title+hr{
+hr{
   border-color:#4d4d4d;
 }
 #products{
@@ -839,6 +853,42 @@ a.read-more{
 }
 .product-block .btn-main{
   margin-top:25px;
+}
+
+#supporterInfo{
+  padding-top:40px;
+  padding-bottom:60px;
+}
+.donate-block{
+  margin-top:40px;
+  text-align:center;
+  max-width:350px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.donate-block>*{
+  margin-top:25px;
+}
+
+#featuredVideo{
+  margin-top:40px;
+  margin-bottom:40px;
+}
+#latestVideos{
+  margin-top:40px;
+  margin-bottom:40px;
+}
+.video-block{
+  margin-top:40px;
+}
+.video-block>h2{
+  font-size:26px;
+  font-weight:500;
+  font-variant:small-caps;
+  color:#267fae;
+}
+.video-block>p{
+  display:inline;
 }
 
 
@@ -923,7 +973,7 @@ a.read-more{
   .small-header .header-logo>img{
     width:130px;
   }
-  .navbar-nav .dropdown.open{
+  .navbar-nav .dropdown{
     position:initial;
   }
   .navbar-nav>li>.dropdown-menu{
@@ -942,6 +992,17 @@ a.read-more{
   }
   .dropdown-menu>li{
     display:inline-block;
+  }
+  .dropdown-menu{
+    display:block !important;
+    visibility:hidden;
+    opacity:0;
+    -webkit-transition:visibility .3s ease, opacity .3s ease;
+    transition:visibility .3s ease, opacity .3s ease;
+  }
+  .open>.dropdown-menu{
+    visibility:visible;
+    opacity:1;
   }
   .hero .caption>p>span{
     display:block;
