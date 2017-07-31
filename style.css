@@ -750,24 +750,10 @@ http://wordpress.org/extend/plugins/wp-pagenavi/
 }
 
 /* some default sidebar styles */
-.ap-widget-pos{
-  margin-bottom:25px;
-}
-.widget.buddypress .bp-login-widget-user-avatar{
-  float:left;
-}
-.bp-login-widget-user-avatar img.avatar{
-  height:40px;
-  width:40px;
-}
-.widget.buddypress .bp-login-widget-user-links>div{
-  padding-left:60px;
-  margin-bottom:.5rem;
-}
 
 /* end default sidebar styles */
 
-.sidebar .widget_bp_core_login_widget>.ap-widget-title{
+.sidebar .widget_theme_my_login>.ap-widget-title{
   font-size:24px;
   text-transform:uppercase;
   font-weight:500;
@@ -775,7 +761,8 @@ http://wordpress.org/extend/plugins/wp-pagenavi/
   margin-top:0;
   text-align:center;
 }
-.sidebar .widget_bp_core_login_widget form#bp-login-widget-form>label{
+.sidebar .tml-user-login-wrap>label,
+.sidebar .tml-user-pass-wrap>label{
   position:absolute;
   width:1px;
   height:1px;

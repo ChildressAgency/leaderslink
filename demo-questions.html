@@ -153,37 +153,47 @@
           </div>
           <div class="col-sm-3 sidebar">
             <!-- not signed in -->
-            <div id="bp_core_login_widget-2" class="ap-widget-pos widget_bp_core_login_widget buddypress widget">
+            <div id="theme-my-login-2" class="ap-widget-pos widget_theme_my_login">
               <h3 class="ap-widget-title">Sign In</h3>
-              <form id="bp-login-widget-form" class="standard-form">
-                <label for="bp-login-widget-user-login">Username</label>
-                <input type="text" id="bp-lgin-width-user-login" class="input" name="log" value="" />
-                <label for="bp-login-widget-user-pass">Password</label>
-                <input id="bp-login-width-user-pass" class="input" name="pwd" value="" spellcheck="false" autocomplete="off" type="password" />
-                <div class="forgetmenot">
-                  <label for="bp-login-widget-rememberme">
-                    <input id="bp-login-widget-rememberme" name="rememberme" value="forever" type="checkbox" />Remember Me
-                  </label>
-                </div>
-                <input id="bp-login-widget-submit" name="wp-submit" value="Sign In" type="submit" />
-                <span class="bp-login-widget-register-link">
-                  <a href="#">Not a member yet? <em>Sign Up Now</em></a>
-                </span>
-              </form>
-            </div>
-            <!-- signedin -->
-            <div id="bp_core_login_widget-2" class="ap-widget-pos widget_bp_core_login_widget buddypress widget">
-              <h3 class="ap-widget-title">Sign In</h3>
-              <div class="bp-login-widget-user-avatar">
-                <a href="#"><img src="images/profile-placeholder.png" class="avatar user-1-avatar avatar-50 photo" width="50" height="50" alt="Profile picture of childress_admin" /></a>
+              <div id="theme-my-login1" class="tml tml-login">
+                <form id="loginform1">
+                  <p class="tml-user-login-wrap">
+                    <label for="user_login1">Username</label>
+                    <input type="text" id="user_login1" class="input form-control" name="log" size="20" value="" />
+                  </p>
+                  <p class="tml-user-pass-wrap">
+                    <label for="user_pass1">Password</label>
+                    <input id="user_pass1" class="input form-control" name="pwd" value="" size="20" spellcheck="false" autocomplete="off" type="password" />
+                  </p>
+                  <div class="tml-rememberme-submit-wrap">
+                    <p class="tml-rememberme-wrap">
+                      <input id="rememberme1" name="rememberme" value="forever" type="checkbox" />
+                      <label for="rememberme1">Remember Me</label>
+                    </p>
+                    <p class="tml-submit-wrap">
+                      <input id="wp-submit1" name="wp-submit" value="Log In" type="submit" />
+                    </p>
+                  </div>
+                </form>
+                <ul class="tml-action-links">
+                  <li><a href="#" rel="nofollow">Register</a></li>
+                  <li><a href="#" rel="nofollow">Lost Password</a></li>
+                </ul>
               </div>
-              <div class="bp-login-widget-user-links">
-                <div class="bp-login-widget-user-link">
-                  <a href="#">childress_admin</a>
+            </div>
+
+            <!-- signedin -->
+            <div id="theme-my-login-2" class="ap-widget-pos widget_theme_my_login">
+              <h3 class="ap-widget-title">Welcome, childress_admin</h3>
+              <div class="tml tml-user-panel" id="theme-my-login1">
+                <div class="tml-user-avatar">
+                  <img src="images/profile-placeholder.png" class="avatar user-1-avatar avatar-50 photo" width="50" height="50" alt="Profile picture of childress_admin" />
                 </div>
-                <div class="bp-login-widget-user-logout">
-                  <a href="#" class="logout">Log Out</a>
-                </div>
+                <ul class="tml-user-links">
+                  <li><a href="#">Dashboard</a></li>
+                  <li><a href="#">Profile</a></li>
+                  <li><a href="#">Log Out</a></li>
+                </ul>
               </div>
             </div>
 
