@@ -61,6 +61,20 @@ h1{
 h1>span{
   color:#ed0000;
 }
+h2{
+  font-size:30px;
+  color:#267fae;
+  font-weight:500;
+  font-variant:small-caps;
+  margin-top:0;
+}
+h3{
+  font-size:26px;
+  color:#267fae;
+  font-weight:500;
+  font-variant:small-caps;
+  margin-top:0;
+}
 
 a{
   color:#000;
@@ -339,6 +353,7 @@ a:focus{
   font-weight:500;
   font-variant:small-caps;
   color:#fff;
+  margin-top:20px;
 }
 #greyCallout .media-body{
   text-align:left;
@@ -472,6 +487,7 @@ footer{
 }
 .footer-nav li>h4>a{
   font-size:18px;
+  font-weight:500;
 }
 .footer-nav>li>ul{
   list-style:none;
@@ -480,6 +496,7 @@ footer{
 .footer-nav li a{
   color:#fff;
   font-size:14px;
+  font-weight:300;
 }
 .footer-social>a{
   color:#fff;
@@ -498,6 +515,8 @@ footer{
 }
 .copyright a{
   color:#fff;
+  font-size:14px;
+  font-weight:300;
 }
 
 #aboutInfo{
@@ -529,9 +548,11 @@ footer{
   font-weight:500;
   font-variant:small-caps;
   margin-top:0;
+  color:#fff;
 }
 #foundedExperience .btn-main{
   margin-top:40px;
+  font-weight:300;
 }
 
 #contactUs{
@@ -548,9 +569,10 @@ footer{
 .contact-form{
   margin-top:40px;
 }
-.contact-form>h2{
+.contact-form>h2,
+.contact-info>h2{
   font-size:18px;
-  font-weight:500px;
+  font-weight:500;
   color:#55acee;
   margin-top:0;
 }
@@ -561,6 +583,7 @@ footer{
   float:right;
   padding-left:60px;
   padding-right:60px;
+  font-weight:300;
 }
 #contactUs .social-links .fa{
   font-size:35px;
@@ -663,6 +686,7 @@ footer{
   color:#267fae;
   font-weight:500;
   font-variant:small-caps;
+  margin-top:10px;
 }
 .blog-summary p{
   display:inline;
@@ -803,15 +827,16 @@ a.read-more{
 }
 #connectedList ul>li>h3{
   font-size:20px;
-  font-weight:500px;
-  text-transform:uppercase;
   margin-top:0;
+  color:#000;
+  font-variant:normal;
 }
 #connectedList ul>li>h3>span{
   font-size:15px;
   font-weight:300;
   text-transform:uppercase;
   display:block;
+  color:#000;
 }
 #connectedList ul>li>p{
   display:inline;
@@ -847,6 +872,7 @@ hr{
   color:#267fae;
   font-variant:small-caps;
   text-align:left;
+  margin-top:10px;
 }
 .product-block p{
   text-align:left;
@@ -886,6 +912,7 @@ hr{
   font-weight:500;
   font-variant:small-caps;
   color:#267fae;
+  margin-top:10px;
 }
 .video-block>p{
   display:inline;
