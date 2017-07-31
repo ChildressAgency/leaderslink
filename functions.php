@@ -282,3 +282,25 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
 		}
 	}
 }
+
+if(function_exists('acf_add_options_page')){
+  acf_add_options_page(array(
+    'page_title' => 'Global Site Settings', 
+    'menu_title' => 'Global Site Settings',
+    'menu_slug' => 'global-settings',
+    'capability' => 'edit_posts',
+    'redirect' => false
+  ));
+
+	acf_add_options_sub_page(array(
+		'page_title' => 'Social Links',
+		'menu_title' => 'Social Links',
+		'parent_slug' => 'global-settings'
+	));
+
+	acf_add_options_sub_page(array(
+		'page_title' => 'Testimonials',
+		'menu_title' => 'Testimonials',
+		'parent_slug' => 'global-settings'
+	));  
+}
