@@ -48,7 +48,11 @@
             if($i%3==0){ echo '<div class="clearfix"></div>'; } ?>
             <div class="col-sm-4">
               <div class="blog-summary">
-                <img src="<?php the_field('featured_image'); ?>" class="img-responsive center-block" alt="" />
+                <?php if(get_field('featured_image')): ?>
+                  <img src="<?php the_field('featured_image'); ?>" class="img-responsive center-block" alt="" />
+                <?php else: 
+                  wp_get_attachment_image(get_queried_object_id(), 'full', '', array('class' => 'img-responsive center-block'));
+                endif; ?>
                 <h2><?php the_title(); ?></h2>
                 <?php the_excerpt(); ?>
                 <a href="<?php the_permalink(); ?>">more...</a>
