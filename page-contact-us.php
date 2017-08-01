@@ -34,7 +34,9 @@
           </div>
         </div>
         <div class="col-sm-7">
-          <?php echo do_shortcode('[contact_form id="contact_page_form"]'); ?>
+          <?php if(have_posts()): while(have_posts()): the_post(); ?>
+            <?php the_content(); ?>
+          <?php endwhile; endif; ?>
         </div>
       </div>
     </div>

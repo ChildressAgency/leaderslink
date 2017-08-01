@@ -1,5 +1,5 @@
-<div class="contact-form">
-  <h2>CONTACT US DIRECTLY</h2>
+<div class="contact-form expert-signup-form">
+  <h2>TELL US ABOUT YOURSELF</h2>
   <div class="row">
     <div class="col-sm-6">
       <div class="form-group">
@@ -15,18 +15,23 @@
     </div>
   </div>
   <div class="form-group">
-    <label for="your-email" class="sr-only" aria-required="true">Email</label>
+    <label for="your-email" class="sr-only">Email</label>
     [email* your-email id:your-email class:form-control placeholder "Email*"]
   </div>
   <div class="form-group">
-    [radio subject id:subject use_label_element "Aid Request" "Donations" "General Information"]
+    <label for="expert-in" class="sr-only">Expert in</label>
+    [text expert-in id:expert-in class:form-control placeholder "Expert in..."]
+  </div>
+  <div class="form-group">
+    <label for="years-experience" class="sr-only">Years of experience</label>
+    [text years-experience id:years-experience class:form-control placeholder "Years of experience"]
   </div>
   <div class="form-group">
     <label for="street-address" class="sr-only">Street Address</label>
     [text street-address id:street-address class:form-control placeholder "Street Address"]
   </div>
   <div class="form-group">
-    <label for="city" class="sr-only">City</label>
+    <label for="City" class="sr-only">City</label>
     [text city id:city class:form-control placeholder "City"]
   </div>
   <div class="row">
@@ -44,10 +49,19 @@
     </div>
   </div>
   <div class="form-group">
-    <label for="your-thoughts" class="sr-only">Your Thoughts</label>
-    [textarea your-thoughts id:your-thoughts class:form-control placeholder "Your Thoughts"]
+    <label for="experience" class="sr-only">Describe Your Experience</label>
+    [textarea experience x6 id:experience class:form-control placeholder "Describe Your Experience"]
+  </div>
+  <div class="form-group">
+    <label for="attachment" class="sr-only">Attach a file</label>
+    [file attachment id:attachment class:form-control]
+  </div>
+  <div class="form-group">
+    [radio inquiry-type id:inquiry-type use_label_element "General Inquiry" "Emergency Submission"]
   </div>
   <div class="form-group">
     [submit class:btn-main class:btn-marine "Submit"]
+    <div class="clearfix"></div>
   </div>
+  <p class="text-center" style="margin-top:40px;">Please allow us a couple days to review your submitted information.</p>
 </div>
