@@ -1,6 +1,6 @@
 jQuery(document).ready(function($){
   $(window).scroll(function(){
-    if($(document).scrollTop() > 50){
+    if($(document).scrollTop()){
       $('body').addClass('small-header');
     }
     else{
