@@ -58,7 +58,7 @@
                 <a href="<?php the_permalink(); ?>">more...</a>
               </div>
             </div>
-        <?php endwhile; else: ?>
+        <?php $i++; endwhile; else: ?>
           <p>There are no articles in the selected category.</p>
         <?php endif; wp_pagenavi(array('query' => $articles)); wp_reset_postdata(); ?>
       </div>
