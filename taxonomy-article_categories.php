@@ -16,11 +16,21 @@
       <div class="clearfix"></div>
       <div class="row">
         <?php
+          global $wp_query;
+          $category = $wp_query->get_queried_object();
+          $cat_name = $category->name;
           $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
           $articles = new WP_Query(array(
             'post_type' => 'expert_advice_articles',
             'posts_per_page' => 9,
-            'paged' => $paged
+            'paged' => $paged,
+            'tax_query' => array(
+              array(
+                'taxonomy' => 'article_categories',
+                'field' => 'name',
+                'terms' => $cat_name
+              )
+            )
           ));
           if($articles->have_posts()): $i=0; while($articles->have_posts()) : $articles->the_post();
             if($i%3==0){ echo '<div class="clearfix"></div>'; } ?>
