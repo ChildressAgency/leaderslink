@@ -680,6 +680,28 @@ footer{
 #latestArticles .sorting select>option{
   font-weight:300;
 }
+
+.filtering{
+  float:right;
+}
+.btn-filter{
+  font-size:18px;
+  color:#267fae;
+  border:1px solid #267fae;
+  background-color:transparent;
+  font-variant:small-caps;
+  font-weight:500;
+}
+.filtering>ul>li>a{
+  font-size:18px;
+  color:#267fae;
+  font-variant:small-caps;
+}
+.filtering>.dropdown-menu{
+  border-radius:0;
+  border-color:#267fae;
+}
+
 .blog-summary{
   margin-top:60px;
   max-width:325px;

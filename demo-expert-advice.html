@@ -89,7 +89,16 @@
       <section id="latestArticles">
         <div class="container">
           <h1>Latest Articles</h1>
-          <div class="sorting">
+          <div class="filtering dropdown">
+            <button class="btn-filter dropdown-toggle" type="button" id="filter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Filter By <i class="fa fa-angle-down"></i></button>
+            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="filter">
+              <li><a href="#">Show All</a></li>
+              <li><a href="#">Hurricanes</a></li>
+              <li><a href="#">Tornados</a></li>
+              <li><a href="#">Typhoons</a></li>
+              <li><a href="#">Earthquakes</a></li>
+            </ul>
+          <!--  
             <select id="order">
               <option value="">Sort by</option>
               <option value="date-asc">Date Asc</option>
@@ -97,6 +106,7 @@
               <option value="title-asc">Title Asc</option>
               <option value="title-desc">Title Desc</option>
             </select>
+          -->
           </div>
           <div class="clearfix"></div>
           <div class="row">
