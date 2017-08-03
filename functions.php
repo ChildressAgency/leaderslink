@@ -324,6 +324,7 @@ function leaderslink_create_post_types(){
     'capability_type' => 'post',
     'public' => true,
     'menu_position' => 5,
+		'menu_icon' => 'dashicons-media-text',
     'query_var' => 'expert_advice_article',
     'supports' => array(
       'title', 
@@ -354,4 +355,54 @@ function leaderslink_create_post_types(){
       )
     )
   );
+
+	$videos_labels = array(
+		'name' => 'Videos',
+		'singular_name' => 'Video',
+		'menu_name' => 'Videos',
+		'add_new_item' => 'Add New Video',
+		'search_items' => 'Search Videos',
+		'edit_item' => 'Edit Video',
+		'view_item' => 'View Video',
+		'all_items' => 'All Videos',
+		'new_item' => 'New Video',
+		'not_found' => 'Video Not Found'
+	);
+	$videos_args = array(
+		'labels' => $videos_labels,
+		'capability_type' => 'post',
+		'public' => true,
+		'menu_position' => 6,
+		'menu_icon' => 'dashicons-format-video',
+		'query_var' => 'leaderslink_videos',
+		'supports' => array(
+			'title',
+			'editor', 
+			'custom_fields',
+			'comments',
+			'revisions',
+			'author'
+		);
+	);
+	register_post_type('leaderslink_videos');
+
+	register_taxonomy('video_categories',
+		'leaderslink_videos',
+		array(
+			'hierarchical' => true,
+			'labels' => array(
+				'name' => 'Video Categories',
+				'singular_name' => 'Video Category',
+				'menu_name' => 'Video Categories',
+				'all_items' => 'All Video Categories',
+				'edit_item' => 'Edit Video Category',
+				'view_item' => 'View Video Category',
+				'update_item' => 'Update Video Category',
+				'add_new_item' => 'Add New Video Category',
+				'new_item_name' => 'New Video Category',
+				'search_items' => 'Search Video Category',
+				'not_found' -> 'Video Category Not Found'
+			)
+		)
+	);
 }

@@ -31,6 +31,8 @@
         <h3><?php the_field('grey_callout_text'); ?></h3>
         <?php if(get_field('grey_callout_link')): ?>
           <a href="<?php the_field('grey_callout_link'); ?>" class="btn-main btn-clear"><?php the_field('grey_callout_link_text'); ?></a>
+        <?php else: ?>
+          <p>&nbsp;</p>
         <?php endif; ?>
       </div>
     </section>
