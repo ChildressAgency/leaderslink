@@ -405,4 +405,34 @@ function leaderslink_create_post_types(){
 			)
 		)
 	);
+
+	$projects_labels = array(
+		'name' => 'Projects',
+		'singular_name' => 'Project',
+		'menu_name' => 'Projects',
+		'add_new_item' => 'Add New Project',
+		'search_items' => 'Search Projects',
+		'edit_item' => 'Edit Project',
+		'view_item' => 'View Project',
+		'all_items' => 'All Projects',
+		'new_item' => 'New Project',
+		'not_found' => 'Project Not Found'
+	);
+	$projects_args = array(
+		'labels' => $projects_labels,
+		'capability_type' => 'post',
+		'public' => true,
+		'menu_position' => 6,
+		'menu_icon' => 'dashicons-location-alt',
+		'query_var' => 'leaderslink_projects',
+		'supports' => array(
+			'title',
+			'editor',
+			'custom_fields',
+			'comments',
+			'revisions',
+			'author'
+		)
+	);
+	register_post_type($projects_args);
 }
