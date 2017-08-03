@@ -1,17 +1,21 @@
 <?php get_header(); ?>
 <main id="main">
-  <?php if(get_field('featured_video')): ?>
+  <?php
+    $videos_page = get_page_by_path('videos');
+    $videos_page_id = $videos_page->ID;
+  ?>
+  <?php if(get_field('featured_video', $videos_page_id)): ?>
     <section id="featuredVideo">
       <div class="container">
         <div class="row">
           <div class="col-sm-6">
             <h1>Featured Video</h1>
-            <?php the_field('featured_video_text'); ?>
+            <?php the_field('featured_video_text', $videos_page_id); ?>
           </div>
           <div class="col-sm-6">
             <div class="embed-responsive embed-responsive-16by9">
               <?php 
-                $featured_video_id = get_field('featured_video');
+                $featured_video_id = get_field('featured_video', $videos_page_id);
                 the_field('video', $featured_video_id);
               ?>
             </div>
@@ -39,11 +43,21 @@
       <div class="clearfix"></div>
       <div class="row">
         <?php
+          global $wp_query;
+          $category = $wp_query->get_queried_object();
+          $cat_name = $category->name;
           $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
           $videos = new WP_Query(array(
             'post_type' => 'leaderslink_videos',
             'posts_per_page' => 9,
-            'paged' => $paged
+            'paged' => $paged,
+            'tax_query' => array(
+              array(
+                'taxonomy' => 'video_categories',
+                'field' => 'name',
+                'terms' => $cat_name
+              )
+            )
           ));
           if($videos->have_posts()): $i=0; while($videos->have_posts()): $videos->the_post();
             if($i%3==0){ echo '<div class="clearfix"'; } ?>

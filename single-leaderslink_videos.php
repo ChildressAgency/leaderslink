@@ -9,6 +9,9 @@
             <?php the_field('intro_text'); ?>
           <?php endif; ?>
         </div>
+        <div class="embed-responsive embed-responsive-16by9">
+          <?php the_field('video'); ?>
+        </div>
         <?php the_content(); ?>
       <?php endwhile; endif; ?>
     </div>
