@@ -78,7 +78,7 @@
               <?php endif; if(get_field('instagram', 'option')): ?>
                 <a href="<?php the_field('instagram', 'option'); ?>"><i class="fa fa-instagram"></i></a>
               <?php endif; if(get_field('linkedin', 'option')): ?>
-                <a href="<?php the_field('instagram', 'option'); ?>"><i class="fa fa-linkedin"></i></a>
+                <a href="<?php the_field('linkedin', 'option'); ?>"><i class="fa fa-linkedin"></i></a>
               <?php endif; ?>
             </div>
           </div>

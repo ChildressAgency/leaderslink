@@ -56,7 +56,7 @@
           <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/2x-icon.png" class="media-object" alt="2x icon" />
         </div>
         <div class="media-body">
-          <h3><?php the_field('grey_callout_bar_text'); ?></h3>
+          <h3><?php the_field('grey_callout_text'); ?></h3>
         </div>
       </div>
     </div>

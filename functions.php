@@ -315,7 +315,7 @@ function leaderslink_create_post_types(){
     'search_items' => 'Search Articles',
     'edit_item' => 'Edit Article',
     'view_item' => 'View Article',
-    'all_items' => 'All Articles'
+    'all_items' => 'All Articles',
     'new_item' => 'New Expert Advice Article',
     'not_found' => 'Article Not Found'
   );
@@ -325,19 +325,19 @@ function leaderslink_create_post_types(){
     'public' => true,
     'menu_position' => 5,
 		'menu_icon' => 'dashicons-media-text',
-    'query_var' => 'expert_advice_article',
+    'query_var' => 'expertadvice_article',
     'supports' => array(
       'title', 
       'editor', 
       'custom_fields', 
       'comments', 
       'revisions',
-      'author');
+      'author')
   );
-  register_post_type('expert_advice_article');
+  register_post_type('expertadvice_article', $expert_advice_args);
 
   register_taxonomy('article_categories',
-    'expert_advice_article',
+    'expertadvice_article',
     array(
       'hierarchical' => true,
       'labels' => array(
@@ -382,9 +382,9 @@ function leaderslink_create_post_types(){
 			'comments',
 			'revisions',
 			'author'
-		);
+		)
 	);
-	register_post_type('leaderslink_videos');
+	register_post_type('leaderslink_videos', $videos_args);
 
 	register_taxonomy('video_categories',
 		'leaderslink_videos',
@@ -401,7 +401,7 @@ function leaderslink_create_post_types(){
 				'add_new_item' => 'Add New Video Category',
 				'new_item_name' => 'New Video Category',
 				'search_items' => 'Search Video Category',
-				'not_found' -> 'Video Category Not Found'
+				'not_found' => 'Video Category Not Found'
 			)
 		)
 	);
@@ -434,5 +434,5 @@ function leaderslink_create_post_types(){
 			'author'
 		)
 	);
-	register_post_type($projects_args);
+	register_post_type('leaderslink_projects', $projects_args);
 }

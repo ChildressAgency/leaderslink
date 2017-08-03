@@ -21,7 +21,7 @@
           $cat_name = $category->name;
           $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
           $articles = new WP_Query(array(
-            'post_type' => 'expert_advice_articles',
+            'post_type' => 'expertadvice_articles',
             'posts_per_page' => 9,
             'paged' => $paged,
             'tax_query' => array(
