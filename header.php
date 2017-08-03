@@ -24,7 +24,7 @@
       </style>
     <![endif]-->
   </head>
-  <body>
+  <body <?php body_class(); ?>>
     <nav id="header-nav">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -101,6 +101,8 @@
         <?php endif; ?>
         <div class="overlay"></div>
       </section>
+    <?php else: ?>
+      <span class="header-cheat"></span>
     <?php endif; ?>
     <?php if(get_field('header_image_caption')): ?>
       <div class="hero-caption">

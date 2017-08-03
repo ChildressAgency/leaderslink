@@ -243,6 +243,11 @@ a:focus{
   position:relative;
   padding-top:94px;
 }
+span.header-cheat{
+  display:block;
+  width:100%;
+  height:94px;
+}
 .hero .caption-wrapper{
   min-height:350px;
   display:table;
@@ -985,6 +990,9 @@ hr{
   .hero{
     padding-top:144px;
   }
+  span.header-cheat{
+    height:144px;
+  }
   .header-donate{
     float:none;
     padding:15px;
@@ -1112,6 +1120,9 @@ hr{
 @media (min-width:768px) and (max-width:991px){
   .hero{
     padding-top:164px;
+  }
+  span.header-cheat{
+    height:164px;
   }
 }
 @media (min-width:992px) and (max-width:1199px){
