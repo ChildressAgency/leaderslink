@@ -45,6 +45,13 @@ jQuery(document).ready(function($){
     });
   }
 
+  $('#faqs').on('shown.bs.collapse', function(){
+    $(window).trigger('resize').trigger('scroll');
+  });
+  $('#faqs').on('hidden.bs.collapse', function(){
+    $(window).trigger('resize').trigger('scroll');
+  });
+
   $('.acf-map').each(function(){
     map = new_map($(this));
   });  

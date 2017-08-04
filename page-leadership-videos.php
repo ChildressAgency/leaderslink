@@ -46,7 +46,7 @@
             'paged' => $paged
           ));
           if($videos->have_posts()): $i=0; while($videos->have_posts()): $videos->the_post();
-            if($i%3==0){ echo '<div class="clearfix"'; } ?>
+            if($i%3==0){ echo '<div class="clearfix"></div>'; } ?>
             <div class="col-sm-4">
               <div class="video-block">
                 <div class="embed-responsive embed-responsive-16by9">
