@@ -50,7 +50,7 @@
             <div class="col-sm-4">
               <div class="video-block">
                 <div class="embed-responsive embed-responsive-16by9">
-                  <img src="<?php echo get_field('video_image') ? get_field('video_image') : get_stylesheet_directory_uri() . '/images/video-placeholder.png'; ?>" class="embed-responsive-item" alt="Video placeholder image" />
+                  <img src="<?php echo get_field('featured_image') ? get_field('featured_image') : get_stylesheet_directory_uri() . '/images/video-placeholder.png'; ?>" class="embed-responsive-item" alt="Video placeholder image" />
                 </div>
                 <h2><?php the_title(); ?></h2>
                 <?php the_excerpt(); ?>
