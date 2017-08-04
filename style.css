@@ -1046,6 +1046,10 @@ hr{
   color:#267fae;
 }
 
+.ap-cradit{
+  display:none !important;
+}
+
 
 @media (max-width:767px){
   .hero{

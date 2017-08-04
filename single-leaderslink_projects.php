@@ -10,7 +10,7 @@
               the_field('intro_text');
             }
             else{
-              the_field('disaster_name');
+              echo '<h3>' . get_field('disaster_name') . '</h3>';
             } 
           ?>
         </div>
