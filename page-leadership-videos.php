@@ -30,7 +30,7 @@
         <?php $video_cats = get_terms('video_categories'); ?>
         <button class="btn-filter dropdown-toggle" type="button" id="filter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Filter By <i class="fa fa-angle-down"></i></button>
         <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="filter">
-          <li><a href="<?php echo home_url('leadership-videos'); ?>">Show All</li>
+          <li><a href="<?php echo home_url('leadership-videos'); ?>">Show All</a></li>
           <?php foreach($video_cats as $cat){
             echo '<li><a href="' . get_term_link($cat) . '">' . $cat->name . '</a></li>';
           } ?>
