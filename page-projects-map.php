@@ -46,6 +46,7 @@
   </section>
   <section id="connectedList">
     <div class="container">
+      <h1><?php the_field('full_list_title'); ?></h1>
       <?php
         $paged = get_query_var('paged') ? get_query_var('paged') : 1;
         $projects = new WP_Query(array(
@@ -54,7 +55,6 @@
           'paged' => $paged
         ));
         if($projects->have_posts()): ?>
-          <h1><?php the_field('full_list_title'); ?></h1>
           <div class="clearfix"></div>
           <ul class="list-unstyled">
             <?php while($projects->have_posts()): $projects->the_post(); ?>
