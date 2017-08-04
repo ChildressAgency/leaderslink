@@ -17,8 +17,17 @@
           </div>
           <div class="col-sm-6 col-sm-height">
             <div class="image-side">
-              <?php $row_image = get_sub_field('row_image'); ?>
-              <img src="<?php echo $row_image['url']; ?>" class="img-responsive center-block" alt="<?php echo $row_image['alt']; ?>" />
+              <?php
+                if(have_rows('video_or_image')): while(have_rows('video_or_image')): the_row();
+                  if(get_row_layout() == 'video'): ?>
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <?php the_sub_field('content_row_video'); ?>
+                    </div>
+                <?php else:
+                  $content_row_image = get_sub_field('content_row_image') ? get_sub_field('content_row_image') : get_stylesheet_directory_uri() . '/images/video-placeholder.png'; ?>
+                  <img src="<?php echo $content_row_image['url']; ?>" class="img-responsive center-block" alt="<?php echo $content_row_image['alt']; ?>" />
+                <?php endif; ?>
+              <?php endwhile; endif; ?>
             </div>
           </div>
         </div>
