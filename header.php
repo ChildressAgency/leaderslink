@@ -38,7 +38,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <div class="header-donate">
-            <a href="<?php the_field('donations_link', 'option'); ?>">Donate</a>
+            <a href="<?php the_field('header_donation_link', 'option'); ?>">Donate</a>
           </div>
           <?php
             $nav_defaults = array(
