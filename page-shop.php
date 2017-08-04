@@ -4,6 +4,16 @@
     <h1 class="shop-title">Shop</h1>
     <hr />
     <section id="products">
+      <?php if(get_field('page_title') || get_field('intro_text')): ?>
+        <div class="page-intro">
+          <?php if(get_field('page_title')): ?>
+            <h1><?php the_field('page_title'); ?></h1>
+          <?php endif; ?>
+          <?php if(get_field('intro_text')): ?>
+            <?php the_field('intro_text'); ?>
+          <?php endif; ?>
+        </div>
+      <?php endif; ?>
       <?php if(have_rows('products')): ?>
         <h2>Latest Products</h2>
         <div class="row">
