@@ -75,6 +75,25 @@ h3{
   margin-top:0;
 }
 
+img.aligncenter,
+img.alignnone{
+  display:block;
+  max-width:100%;
+  margin:25px auto;
+}
+img.alignleft{
+  display:block;
+  max-width:100%;
+  float:left;
+  margin:25px 25px 25px 0px;
+}
+img.alignright{
+  display:block;
+  max-width:100%;
+  float:right;
+  margin:25px 0px 25px 25px;
+}
+
 a{
   color:#000;
   font-weight:500;

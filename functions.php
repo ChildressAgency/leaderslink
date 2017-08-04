@@ -51,6 +51,14 @@ function leaderslink_scripts(){
     true
   );
 
+	  wp_register_script(
+    'google-maps',
+    '//maps.googleapis.com/maps/api/js?key=' . get_field('google_maps_api_key', 'option'),
+    array('jquery'),
+    '',
+    false
+  );
+
   wp_register_script(
     'leaderslink-scripts', 
     get_template_directory_uri() . '/js/leaderslink-scripts.js', 
@@ -63,6 +71,9 @@ function leaderslink_scripts(){
   wp_enqueue_script('fontawesome');
   wp_enqueue_script('lightslider');
   wp_enqueue_script('parallax');
+	if(is_page('projects-map')){
+		wp_enqueue_script('google-maps');
+	}
   wp_enqueue_script('leaderslink-scripts');  
 }
 
@@ -435,4 +446,9 @@ function leaderslink_create_post_types(){
 		)
 	);
 	register_post_type('leaderslink_projects', $projects_args);
+}
+
+add_action('acf/init', 'leaderslink_acf_init');
+function leaderslink_acf_init(){
+	acf_update_setting('google_api_key', get_field('google_maps_api_key', 'option'));
 }

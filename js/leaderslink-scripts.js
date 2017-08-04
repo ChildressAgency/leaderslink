@@ -251,7 +251,7 @@ function add_marker( $marker, map ) {
 	// create marker
 	var marker = new google.maps.Marker({
     position	: latlng,
-    icon: 'images/leaderslink-marker.png',
+    icon: leaderslinkMarker,
 		map			: map
 	});
 	// add to array

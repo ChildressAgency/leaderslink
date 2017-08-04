@@ -23,6 +23,9 @@
           )
         ));
         if($map_projects->have_posts()): ?>
+          <script>
+            var leaderslinkMarker = "<?php echo get_stylesheet_directory_uri() . '/images/leaderslink-marker.png'; ?>";
+          </script>
           <div id="projectMap" class="project-map acf-map">
             <?php while($map_projects->have_posts()): $map_projects->the_post(); 
               $location = get_field('location'); ?>
