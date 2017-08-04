@@ -306,6 +306,9 @@ span.header-cheat{
   background-color:rgba(0,0,0,.3);
 }
 
+#intro{
+  margin-top:25px;
+}
 #intro h1{
   margin-bottom:25px;
 }
