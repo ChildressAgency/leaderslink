@@ -38,7 +38,7 @@
                 <h2><?php the_sub_field('get_involved_section_title'); ?></h2>
                 <?php the_sub_field('get_involved_section_text'); ?>
                 <?php if(get_sub_field('get_involved_section_link')): ?>
-                  <a href="<?php get_sub_field('get_involved_section_link'); ?>" class="btn-main"><?php get_sub_field('get_involved_section_link_text'); ?></a>
+                  <a href="<?php echo get_sub_field('get_involved_section_link'); ?>" class="btn-main"><?php echo get_sub_field('get_involved_section_link_text'); ?></a>
                 <?php endif; ?>
               </div>
             </div>
