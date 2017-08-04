@@ -23,7 +23,7 @@
             </div>
           </div>
           <div class="col-sm-6">
-            <?php echo do_shortcode('[contact_form id="newsletters"]'); ?>
+            <?php echo do_shortcode('[contact-form-7 id="247" title="Newsletter Signup Form"]'); ?>
           </div>
         </div>
       </div>
