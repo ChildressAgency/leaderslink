@@ -30,8 +30,9 @@
                   <img src="<?php the_field('featured_image'); ?>" class="img-responsive center-block" alt="" />
                 <?php else: 
                   //wp_get_attachment_image(get_queried_object_id(), 'full', '', array('class' => 'img-responsive center-block'));
-                  ?>
-                  <img src="<?php the_field('category_image', get_queried_object_id()); ?>" class="img-responsive center-block" alt="" />
+                  $terms = wp_get_post_terms(get_the_ID(), 'expertadvice_articles');
+                  $term = $terms[0]; ?>
+                  <img src="<?php the_field('category_image', 'article_category_' . $term->term_id); ?>" class="img-responsive center-block" alt="" />
                 <?php endif; ?>
                 <h2><?php the_title(); ?></h2>
                 <?php the_excerpt(); ?>
