@@ -29,8 +29,10 @@
                 <?php if(get_field('featured_image')): ?>
                   <img src="<?php the_field('featured_image'); ?>" class="img-responsive center-block" alt="" />
                 <?php else: 
-                  wp_get_attachment_image(get_queried_object_id(), 'full', '', array('class' => 'img-responsive center-block'));
-                endif; ?>
+                  //wp_get_attachment_image(get_queried_object_id(), 'full', '', array('class' => 'img-responsive center-block'));
+                  ?>
+                  <img src="<?php the_field('category_image', get_queried_object_id()); ?>" class="img-responsive center-block" alt="" />
+                <?php endif; ?>
                 <h2><?php the_title(); ?></h2>
                 <?php the_excerpt(); ?>
                 <a href="<?php the_permalink(); ?>">more...</a>

@@ -77,6 +77,7 @@
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us<i class="fa fa-caret-down"></i></a>
                   <ul class="dropdown-menu">
+                    <li<?php if(is_page('about')){ echo ' class="active"'; } ?>><a href="<?php echo home_url('about'); ?>">About LeadersLink</a></li>
                     <li<?php if(is_page('our-team')){ echo ' class="active"'; } ?>><a href="<?php echo home_url('our-team'); ?>">Our Team</a></li>
                     <li<?php if(is_page('our-partners')){ echo ' class="active"'; } ?>><a href="<?php echo home_url('our-partners'); ?>">Our Partners</a></li>
                   </ul>

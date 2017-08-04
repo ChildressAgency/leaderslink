@@ -4,10 +4,10 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-5">
-          <h1><?php the_field('page_title'); ?></h1>
-          <?php the_field('intro_text'); ?>
-          <?php if(get_field('intro_link')): ?>
-            <a href="<?php the_field('intro_link'); ?>" class="btn-main"><?php the_field('intro_link_text'); ?></a>
+          <h1><?php the_field('about_page_intro_title'); ?></h1>
+          <?php the_field('about_page_intro_text'); ?>
+          <?php if(get_field('about_page_intro_link')): ?>
+            <a href="<?php the_field('about_page_intro_link'); ?>" class="btn-main"><?php the_field('about_page_intro_link_text'); ?></a>
           <?php endif; ?>
         </div>
         <div class="col-sm-7">
@@ -54,7 +54,7 @@
       <div class="row">
         <div class="col-sm-5">
           <div class="image-side">
-            <?php $founded_image = get_field('founded_from_experience_image'); 
+            <?php $founded_image = get_field('grey_callout_image'); 
             if($founded_image): ?>
               <img src="<?php echo $founded_image['url']; ?>" class="img-responsive center-block" alt="<?php echo $founded_image['alt']; ?>" />
             <?php endif; ?>
@@ -62,10 +62,10 @@
         </div>
         <div class="col-sm-7">
           <div class="text-side">
-            <h2><?php the_field('founded_from_experience_title'); ?></h2>
-            <?php the_field('founded_from_experience_content'); ?>
-            <?php if(get_field('founded_from_experience_link')): ?>
-              <a href="<?php the_field('founded_from_experience_link'); ?>" class="btn-main btn-clear"><?php the_field('founded_from_experience_link_text'); ?></a>
+            <h2><?php the_field('grey_callout_title'); ?></h2>
+            <?php the_field('grey_callout_content'); ?>
+            <?php if(get_field('grey_callout_link')): ?>
+              <a href="<?php the_field('grey_callout_link'); ?>" class="btn-main btn-clear"><?php the_field('grey_callout_link_text'); ?></a>
             <?php endif; ?>
           </div>
         </div>
