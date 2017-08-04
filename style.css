@@ -864,6 +864,9 @@ a.read-more{
 .project-map{
   margin-top:40px;
 }
+#connectedList .project-block{
+  margin-top:40px;
+}
 #connectedList{
   margin-top:40px;
   padding-bottom:40px;
@@ -874,22 +877,23 @@ a.read-more{
 #connectedList ul>li{
   margin-bottom:40px;
 }
-#connectedList ul>li>h3{
+#connectedList .project-block>h3{
   font-size:20px;
   margin-top:0;
   color:#000;
   font-variant:normal;
 }
-#connectedList ul>li>h3>span{
+#connectedList .project-block>h3>span{
   font-size:15px;
   font-weight:300;
   text-transform:uppercase;
   display:block;
   color:#000;
 }
-#connectedList ul>li>p{
+#connectedList .project-block>p{
   display:inline;
 }
+
 .shop-title{
   font-size:60px;
   margin-top:25px;

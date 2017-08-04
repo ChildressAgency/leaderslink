@@ -59,17 +59,15 @@
         ));
         if($projects->have_posts()): ?>
           <div class="clearfix"></div>
-          <div class="row">
+          <ul class="list-unstyled">
             <?php while($projects->have_posts()): $projects->the_post(); ?>
-              <div class="col-sm-6">
-                <div class="project-block">
-                  <h3><?php the_field('city_state'); ?><span><?php the_field('disaster_name'); ?></span></h3>
-                  <?php the_excerpt(); ?>
-                  <a href="<?php the_permalink(); ?>" class="read-more">more...</a>
-                </div>
-              </div>
+              <li>
+                <h3><?php the_field('city_state'); ?><span><?php the_field('disaster_name'); ?></span></h3>
+                <?php the_excerpt(); ?>
+                <a href="<?php the_permalink(); ?>" class="read-more">more...</a>
+              </li>
             <?php endwhile; ?>
-          </div>
+          </ul>
       <?php endif; wp_pagenavi(array('query' => $projects)); wp_reset_postdata(); ?>
     </div>
   </section>
