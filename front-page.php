@@ -31,9 +31,9 @@
     <section id="getInvolved">
       <h1 class="section-title">Get Involved</h1>
       <div class="container-fluid container-sm-height">
-        <?php while(have_rows('get_involved_section')): the_row(); ?>
+        <?php $i=1; while(have_rows('get_involved_section')): the_row(); ?>
           <div class="row row-sm-height">
-            <div class="col-sm-6 col-sm-height">
+            <div class="col-sm-6 col-sm-height<?php if($i%2==0){ echo ' col-sm-push-6'; } ?>">
               <div class="text-side">
                 <h2><?php the_sub_field('get_involved_section_title'); ?></h2>
                 <?php the_sub_field('get_involved_section_text'); ?>
@@ -42,10 +42,10 @@
                 <?php endif; ?>
               </div>
             </div>
-            <div class="col-sm-6 col-sm-height image-side" style="background-image:url(<?php the_sub_field('get_involved_section_image'); ?>);<?php the_sub_field('get_involved_section_image-css'); ?>">
+            <div class="col-sm-6 col-sm-height image-side<?php if($i%2==0){ echo ' col-sm-pull-6'; } ?>" style="background-image:url(<?php the_sub_field('get_involved_section_image'); ?>);<?php the_sub_field('get_involved_section_image-css'); ?>">
             </div>
           </div>
-        <?php endwhile; ?>
+        <?php $i++; endwhile; ?>
       </div>
     </section>
   <?php endif; ?>
