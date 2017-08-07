@@ -1046,8 +1046,16 @@ hr{
   color:#267fae;
 }
 
+
+/******************************
+* anspress css overrides
+******************************/
 .ap-cradit{
   display:none !important;
+}
+.anspress-content .page-intro{
+  text-align:left;
+  max-width:none;
 }
 
 
