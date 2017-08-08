@@ -1069,7 +1069,8 @@ hr{
   border:1px solid #666;
   border-radius:0 !important;
 }
-.ap-btn{
+.ap-btn,
+.ap-btn-ask{
   font-size:18px;
   text-transform:uppercase;
   border:1px solid #3a5a99;
@@ -1080,14 +1081,16 @@ hr{
   color:#fff;
   background-color:#3a5a99;
   background-image:none;
+  border-radius:0;
 }
 .ap-btn:hover,
-.ap-btn:focus{
+.ap-btn:focus,
+.ap-btn-ask:hover,
+.ap-btn-ask:focus{
   color:#fff;
   text-decoration:none;
   background-color:#267fae;
   border-color:#267fae;
-  border-radius:0;
 }
 #anspress .ap-filter-toggle{
   color:#000;
@@ -1143,6 +1146,17 @@ hr{
   background-color:#267fae;
   border-color:#267fae;
   border-radius:0;
+}
+.widget_search .search-form .form-control{
+  border-right:none;
+}
+.widget_search .search-form .btn-main.btn-marine{
+  border:1px solid #666;
+  border-left:none;
+  padding:2px 15px;
+}
+.widget_leaderslink_ask_button_widget{
+  text-align:center;
 }
 
 
