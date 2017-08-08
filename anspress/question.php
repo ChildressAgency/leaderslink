@@ -40,6 +40,7 @@
 						<div class="ap-cell-inner">
 							<div class="ap-q-metas">
 								<?php echo ap_user_display_name( [ 'html' => true ] ); ?>
+                <?php leaderslink_buddypress_profile_information() ?>
 								<a href="<?php the_permalink(); ?>" class="ap-posted">
 									<?php
 										printf(
