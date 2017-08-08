@@ -517,3 +517,24 @@ function leaderslink_replace_ask_btn_text($text){
 	}
 	return $text;
 }
+
+add_filter('ap_display_question_metas', 'leaderslink_question_metas');
+function leaderslink_question_metas($metas, $question_id = false){
+	if($question_id == false){
+		$question_id = get_the_ID();
+	}
+	//$metas['solved'] = '';
+	//$metas['views'] = '';
+	//$metas['active'] = '';
+	//$metas['history'] = '';
+	//$metas['categories'] = '';
+
+	unset($metas);
+
+	$meta_categories = ap_question_categories_html(array('label' => ''));
+
+	$last_active = ap_get_last_active($question_id);
+	$metas['meta'] = '<p class="question-meta">Posted under ' . $meta_categories . ' - <span>Last Updated '. $last_active . '</span></p>';
+
+	return $metas;
+}

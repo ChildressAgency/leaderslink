@@ -817,11 +817,11 @@ http://wordpress.org/extend/plugins/wp-pagenavi/
   font-weight:500;
   color:#4d4d4d;
 }
-.question-meta>a{
+.question-meta a{
   color:#4d4d4d;
   font-size:14px;
 }
-.question-meta>a:hover{
+.question-meta a:hover{
   color:#4d4d4d;
   text-decoration:underline;
 }
@@ -1085,6 +1085,7 @@ hr{
   background-color:#3a5a99;
   background-image:none;
   border-radius:0;
+  display:inline-block;
 }
 .ap-btn:hover,
 .ap-btn:focus,
@@ -1163,7 +1164,7 @@ hr{
   font-weight:500;
   color:#000;
   text-transform:uppercase;
-  font-size:20px;
+  font-size:18px;
   border-bottom:1px solid #ccc;
 }
 #anspress .widget_bp_core_login_widget .ap-widget-title{
@@ -1190,6 +1191,8 @@ hr{
 }
 #ap-categories-widget.ap-cat-wid>li{
   border-color:#ccc;
+  padding-top:0;
+  padding-bottom:0;
 }
 .widget_ap_questions_widget .ap-question-title{
   white-space:nowrap;
@@ -1199,6 +1202,31 @@ hr{
 }
 .widget_ap_questions_widget .ap-question-title:hover{
   text-decoration:underline !important;
+}
+#anspress .ap-questions-summery{
+  margin-right:0;
+}
+#anspress .ap-questions .ap-questions-title{
+  font-size:28px;
+  color:#267fae;
+  line-height:1em;
+  font-weight:500;
+}
+#anspress .ap-questions{
+  margin-top:60px;
+  border:none;
+}
+#anspress .ap-questions .ap-questions-item{
+  border-bottom-color:#b2b2b2;
+}
+#anspress .ap-questions .ap-questions-summery .questions-desc>p{
+  display:inline;
+}
+#anspress .ap-questions .ap-display-meta-item.meta{
+  margin-right:0;
+}
+#anspress .ap-questions .ap-display-meta-item a{
+  color:#4d4d4d;
 }
 
 
