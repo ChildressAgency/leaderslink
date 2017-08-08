@@ -1050,6 +1050,9 @@ hr{
 /******************************
 * anspress css overrides
 ******************************/
+.anspress{
+  font-family:ProximaNova, sans-serif;
+}
 .ap-cradit{
   display:none !important;
 }
@@ -1094,16 +1097,13 @@ hr{
 }
 #anspress .ap-filter-toggle{
   color:#000;
+  font-weight:500;
 }
 #anspress .ap-filter-toggle:hover{
   text-decoration:underline;
 }
 #anspress #ap-filter-reset{
   margin-top:-4px;
-}
-#anspress .widget_bp_core_login_widget .ap-widget-title{
-  font-size:32px;
-  text-align:center;
 }
 #bp-login-widget-form>label{
   position:absolute;
@@ -1157,6 +1157,48 @@ hr{
 }
 .widget_leaderslink_ask_button_widget{
   text-align:center;
+}
+#anspress .ap-widget-title{
+  font-variant:normal;
+  font-weight:500;
+  color:#000;
+  text-transform:uppercase;
+  font-size:20px;
+  border-bottom:1px solid #ccc;
+}
+#anspress .widget_bp_core_login_widget .ap-widget-title{
+  font-size:34px;
+  text-align:center;
+  color:#267fae;
+  text-transform:none;
+  font-variant:small-caps;
+  border-bottom:none;
+}
+.widget.buddypress .bp-login-widget-user-links>div.bp-login-widget-user-link a{
+  font-weight:500;
+}
+#anspress a{
+  font-weight:500;
+}
+#ap-categories-widget.ap-cat-wid>li a{
+  font-size:18px;
+  font-weight:300;
+  text-transform:uppercase;
+}
+#ap-categories-widget.ap-cat-wid>li a:hover{
+  text-decoration:underline;
+}
+#ap-categories-widget.ap-cat-wid>li{
+  border-color:#ccc;
+}
+.widget_ap_questions_widget .ap-question-title{
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  font-weight:300 !important;
+}
+.widget_ap_questions_widget .ap-question-title:hover{
+  text-decoration:underline !important;
 }
 
 
