@@ -1087,6 +1087,12 @@ hr{
   border-radius:0;
   display:inline-block;
 }
+.ap-display-meta-item.subscribe .ap-btn-subscribe{
+  font-size:12px;
+  background-color:#3a5a99;
+  font-weight:300 !important;
+  padding:0px 10px;
+}
 .ap-btn:hover,
 .ap-btn:focus,
 .ap-btn-ask:hover,
@@ -1095,6 +1101,13 @@ hr{
   text-decoration:none;
   background-color:#267fae;
   border-color:#267fae;
+}
+.ap-display-meta-item.subscribe .ap-btn-subscribe:hover{
+  background-color:#267fae;
+  border-color:#267fae;
+}
+.ap-display-meta-item.subscribe .ap-subscribers-count{
+  display:none;
 }
 #anspress .ap-filter-toggle{
   color:#000;
@@ -1227,6 +1240,92 @@ hr{
 }
 #anspress .ap-questions .ap-display-meta-item a{
   color:#4d4d4d;
+}
+#question .ap-single-vote{
+  display:none;
+}
+#anspress .ap-q-metas a{
+  font-size:20px;
+  font-weight:500;
+}
+.ap-q-metas>a.ap-user-reputation{
+  line-height:1em;
+  padding:0px 10px;
+  color:#fff !important;
+  background-color:#267fae;
+}
+#anspress .ap-q-metas a.ap-posted{
+  display:block;
+  font-size:14px;
+  font-style:italic;
+  color:#8f8f8f;
+  font-weight:300;
+}
+#anspress .ap-cell-inner{
+  border:none;
+}
+#anspress .ap-q-metas{
+  background-color:#fff;
+  border-bottom:none;
+  padding-top:0;
+}
+.ap-post-footer{
+  border-top:none;
+}
+.ap-post-footer .ap-btn-newcomment{
+  color:#000;
+  text-transform:none;
+  background-color:#fff;
+  font-size:14px;
+  line-height:1em;
+  border:1px solid #000;
+  height:auto;
+  padding:10px 25px;
+  margin-right:15px;
+  -webkit-transition:all .3s ease;
+  transition:all .3s ease;
+}
+.ap-post-footer .ap-btn-newcomment:hover,
+.ap-post-footer .ap-btn-newcomment:focus{
+  color:#fff;
+  background-color:#267fae;
+  border-color:#267fae;
+}
+#anspress .ap-post-footer .ap-btn-comments{
+  background-color:#fff;
+  text-transform:none;
+  font-size:14px;
+  font-style:italic;
+  font-weight:300;
+  color:#4d4d4d;
+}
+#anspress .ap-post-footer .ap-btn-comments:hover, 
+#anspress .ap-post-footer .ap-btn-comments:focus{
+  color:#4d4d4d;
+  text-decoration:underline;
+}
+#answer_form{
+  padding:0;
+}
+#answer_form .ap-btn-submit{
+  float:right;
+}
+#answer-form-c .ap-minimal-placeholder{
+  border:2px solid rgba(0,0,0,0.1);
+}
+#answer_form .ap-upload-anchor a#pickfiles{
+  font-size:13px;
+}
+#answer_form .ap-upload-anchor a#pickfiles:hover{
+  text-decoration:underline;
+}
+#anspress .ap-answers-label{
+  font-size:28px;
+  font-variant:normal;
+}
+#anspress .ap-post-footer .ap-btn-select{
+  color:#fff;
+  font-weight:300;
 }
 
 
