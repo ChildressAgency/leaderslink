@@ -509,3 +509,11 @@ class leaderslink_ask_button_widget extends WP_Widget{
 /*******************************
 * end ask question button widget
 ********************************/
+
+add_filter('gettext', 'leaderslink_replace_ask_btn_text');
+function leaderslink_replace_ask_btn_text($text){
+	if($text == 'Ask question'){
+		$text = 'Ask A Question';
+	}
+	return $text;
+}
