@@ -538,3 +538,46 @@ function leaderslink_question_metas($metas, $question_id = false){
 
 	return $metas;
 }
+
+// wordpress login page css
+add_action( 'login_enqueue_scripts', 'leaderslink_custom_login_css' );
+function leaderslink_custom_login_css() { ?>
+	<style type="text/css">
+		body.login{
+			background-color:#fff;
+		}
+    #login h1 a, .login h1 a {
+      background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/logo-white-bg.png);
+			height:62px;
+			width:100%;
+			max-width:245px;
+			background-size: contain;
+			background-repeat: no-repeat;
+     	padding-bottom: 30px;
+		}
+		#loginform{
+			border:1px solid #ddd;
+		}
+		#loginform input[type="text"],
+		#loginform input[type="password"]{
+			background-color:transparent;
+			border-color:#666;
+			color:#666;
+		}
+		#loginform label{
+			color:#000;
+		}
+		#loginform input[type="submit"]{
+			background-color:#267fae;
+			border-color:#267fae;
+			box-shadow:none;
+			border-radius:0;
+			-webkit-transition:all .3s ease;
+			transition:all .3s ease;
+		}
+		#loginform input[type="submit"]:hover{
+			background-color:#3a5a99;
+			border-color:#3a5a99;
+		}
+  </style>
+<?php }

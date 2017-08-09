@@ -1407,6 +1407,88 @@ hr{
   color:#707070;
   background:transparent;
 }
+#buddypress .standard-form label, 
+#buddypress .standard-form legend, 
+#buddypress .standard-form span.label{
+  font-weight:500;
+  font-size:18px;
+}
+#buddypress .standard-form input[type="text"],
+#buddypress .standard-form input[type="email"],
+#buddypress .standard-form input[type="password"]{
+  background:transparent !important;
+  border-color:#666 !important;
+  color:#666 !important;
+  font-size:16px !important;
+}
+#buddypress input[type="submit"]{
+  background-color:#267fae;
+  border-color:#267fae;
+  color:#fff;
+  font-size:18px !important;
+  -webkit-transition:all .3s ease;
+  transition:all .3s ease;
+}
+#buddypress input[type="submit"]:hover{
+  background-color:#3a5a99;
+  border-color:#3a5a99;
+  color:#fff;
+}
+#buddypress form fieldset{
+  margin-top:15px;
+}
+#anspress .ap-bpsingle-title>a{
+  color:#267fae;
+  font-variant:small-caps;
+  font-size:24px;
+  font-weight:500;
+}
+#anspress .ap-bpsingle-title>a:hover{
+  text-decoration:underline;
+}
+#anspress .ap-view-question{
+  background-color:#267fae;
+  font-weight:300;
+  font-size:16px;
+  -webkit-transition:all .3s ease;
+  transition:all .3s ease;
+}
+#anspress .ap-view-question:hover,
+#anspress .ap-view-question:focus{
+  background-color:#3a5a99;
+}
+#anspress .ap-q-inner{
+  padding-top:0;
+}
+#anspress .ap-reputation-activity{
+  font-weight:500;
+  font-size:16px;
+}
+#anspress .ap-reputation-ref>strong{
+  font-weight:500;
+  color:#267fae;
+  font-size:21px;
+  font-variant:small-caps;
+  line-height:1em;
+}
+#anspress .ap-reputation-ref>p{
+  font-weight:300;
+  color:#000;
+}
+#anspress .ap-reputation-points>span{
+  background-color:#267fae;
+}
+#buddypress .ap-user-meta-reputation{
+  background-color:#267fae;
+  color:#fff;
+}
+#anspress .ap-taxo-detail .ap-category-icon{
+  display:none;
+}
+#anspress .ap-taxo-detail .ap-tax-count{
+  background-color:#267fae;
+  font-weight:300;
+}
 
 
 @media (max-width:767px){
