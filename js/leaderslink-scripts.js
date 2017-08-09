@@ -16,6 +16,7 @@ jQuery(document).ready(function($){
       item:3,
       loop:true,
       slideMargin:0,
+      auto:true,
       pager:false,
       responsive:[
         {
