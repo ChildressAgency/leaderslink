@@ -515,6 +515,10 @@ function leaderslink_replace_ask_btn_text($text){
 	if($text == 'Ask question'){
 		$text = 'Ask A Question';
 	}
+	elseif($text == 'Sorry! you are not allowed to read this question.'){
+		$text = '<p class="text-center">You must be logged in to view this page.</p>';
+		$text .= ap_get_template_part('login-signup');
+	}
 	return $text;
 }
 
