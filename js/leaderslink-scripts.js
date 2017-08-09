@@ -17,6 +17,7 @@ jQuery(document).ready(function($){
       loop:true,
       slideMargin:0,
       auto:true,
+      pauseOnHover:true,
       pager:false,
       responsive:[
         {
@@ -40,6 +41,7 @@ jQuery(document).ready(function($){
       pager:false,
       controls:false,
       auto:true,
+      pauseOnHover:true,
       keyPress:true,
       adaptiveHeight:true,
       pause:5000,
