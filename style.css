@@ -1539,6 +1539,12 @@ hr{
   #testimonials>.container{
     display:block;
   }
+  #testimonialSlider .testimonial{
+    font-size:26px;
+  }
+  #testimonialSlider .testimonial-author{
+    font-size:20px;
+  }
 }
 @media (min-width:768px){
   .container-sm-height{
