@@ -585,3 +585,22 @@ function leaderslink_custom_login_css() { ?>
 		}
   </style>
 <?php }
+
+function leaderslink_add_video_iframe_attr($video_iframe){
+	// use preg_match to find iframe src
+	preg_match('/src="(.+?)"/', $video_iframe, $matches);
+	$src = $matches[1];
+
+	// add extra params to iframe src
+	$params = array(
+			//'controls'    => 0,
+			//'hd'        => 1,
+			//'autohide'    => 1
+			'rel' => 0
+	);
+
+	$new_src = add_query_arg($params, $src);
+
+	$video_iframe = str_replace($src, $new_src, $video_iframe);	
+	return $video_iframe;
+}

@@ -44,7 +44,7 @@ jQuery(document).ready(function($){
       pauseOnHover:true,
       keyPress:true,
       adaptiveHeight:true,
-      pause:5000,
+      pause:3000,
       onAfterSlide:function(el){
         $(window).trigger('resize').trigger('scroll');
       }
@@ -81,8 +81,11 @@ function new_map( $el ) {
 	var $markers = $el.find('.marker');
 	// vars
 	var args = {
-		zoom		: 4,
-		center		: new google.maps.LatLng(0, 0),
+    zoom		: 4,
+    minZoom: 4,
+    maxZoom: 8,
+    //gestureHandling: 'none',
+    center		: new google.maps.LatLng(0, 0),
     mapTypeId	: google.maps.MapTypeId.ROADMAP,
     disableDefaultUI: true,
     styles:[
@@ -372,7 +375,7 @@ function center_map( map ) {
 	{
 		// set center of map
 	    map.setCenter( bounds.getCenter() );
-	    map.setZoom( 16 );
+	    //map.setZoom( 16 );
 	}
 	else
 	{

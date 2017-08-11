@@ -57,7 +57,7 @@
               <li>
                 <h4>About Us</h4>
                 <ul>
-                  <li><a href="<?php echo home_url('about'); ?>">About LeadersLink</li>
+                  <li><a href="<?php echo home_url('about'); ?>">Our Mission</li>
                   <li><a href="<?php echo home_url('our-team'); ?>">Our Team</a></li>
                   <li><a href="<?php echo home_url('our-partners'); ?>">Our Partners</a></li>
                 </ul>
