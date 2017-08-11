@@ -282,7 +282,7 @@ span.header-cheat{
   padding-right:15px;
 }
 .hero .caption>p{
-  font-size:56px;
+  font-size:60px;
   color:#fff;
   font-variant:small-caps;
   font-weight:500;
@@ -926,6 +926,9 @@ hr{
   font-variant:small-caps;
   text-align:left;
   margin-top:10px;
+}
+.product-block>img{
+  max-height:215px;
 }
 .product-block p{
   text-align:left;

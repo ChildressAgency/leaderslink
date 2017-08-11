@@ -44,7 +44,7 @@ jQuery(document).ready(function($){
       pauseOnHover:true,
       keyPress:true,
       adaptiveHeight:true,
-      pause:3000,
+      pause:5000,
       onAfterSlide:function(el){
         $(window).trigger('resize').trigger('scroll');
       }
@@ -84,7 +84,9 @@ function new_map( $el ) {
     zoom		: 4,
     minZoom: 4,
     maxZoom: 8,
-    //gestureHandling: 'none',
+    zoomControl:true,
+    gestureHandling: 'cooperative',
+    scrollwheel: false,
     center		: new google.maps.LatLng(0, 0),
     mapTypeId	: google.maps.MapTypeId.ROADMAP,
     disableDefaultUI: true,
