@@ -10,11 +10,16 @@ jQuery(document).ready(function($){
 
   $(window).stellar();
 
+  $('#bp-login-widget-user-login').attr('placeholder', 'Username');
+  $('#bp-login-widget-user-pass').attr('placeholder', 'Password');
+  
   if(typeof $.fn.lightSlider == 'function'){
     $('#sliderBar .slider-bar').lightSlider({
       item:3,
       loop:true,
       slideMargin:0,
+      auto:true,
+      pauseOnHover:true,
       pager:false,
       responsive:[
         {
@@ -38,6 +43,7 @@ jQuery(document).ready(function($){
       pager:false,
       controls:false,
       auto:true,
+      pauseOnHover:true,
       keyPress:true,
       adaptiveHeight:true,
       pause:5000,
@@ -57,6 +63,18 @@ jQuery(document).ready(function($){
   $('.acf-map').each(function(){
     map = new_map($(this));
   });  
+
+  if (navigator.userAgent.match(/Trident\/7\./)) { // if IE
+    $('body').on("mousewheel", function () {
+      // remove default behavior
+      event.preventDefault();
+
+      //scroll without smoothing
+      var wheelDelta = event.wheelDelta;
+      var currentScrollPosition = window.pageYOffset;
+      window.scrollTo(0, currentScrollPosition - wheelDelta);
+    });
+  }  
 });
 
 /*
@@ -77,8 +95,13 @@ function new_map( $el ) {
 	var $markers = $el.find('.marker');
 	// vars
 	var args = {
-		zoom		: 4,
-		center		: new google.maps.LatLng(0, 0),
+    zoom		: 4,
+    minZoom: 4,
+    maxZoom: 8,
+    zoomControl:true,
+    gestureHandling: 'cooperative',
+    scrollwheel: false,
+    center		: new google.maps.LatLng(0, 0),
     mapTypeId	: google.maps.MapTypeId.ROADMAP,
     disableDefaultUI: true,
     styles:[
@@ -368,7 +391,7 @@ function center_map( map ) {
 	{
 		// set center of map
 	    map.setCenter( bounds.getCenter() );
-	    map.setZoom( 16 );
+	    //map.setZoom( 16 );
 	}
 	else
 	{
