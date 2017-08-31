@@ -8,9 +8,11 @@ jQuery(document).ready(function($){
     }
   });
 
+  $(window).stellar();
+
   $('#bp-login-widget-user-login').attr('placeholder', 'Username');
   $('#bp-login-widget-user-pass').attr('placeholder', 'Password');
-
+  
   if(typeof $.fn.lightSlider == 'function'){
     $('#sliderBar .slider-bar').lightSlider({
       item:3,

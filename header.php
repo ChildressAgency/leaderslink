@@ -90,7 +90,7 @@
       </div>
     </nav>
     <?php if(get_field('header_image')): ?>
-      <section class="hero<?php if(is_front_page()){ echo ' hp-hero'; } ?> parallax-window" data-parallax="scroll" data-image-src="<?php the_field('header_image'); ?>">
+      <section class="hero<?php if(is_front_page()){ echo ' hp-hero'; } ?> parallax-window" data-stellar-background-ratio="0.2" style="background-image:url(<?php the_field('header_image'); ?>); <?php the_field('header_image_css'); ?>">
         <?php if(get_field('header_title')): ?>
           <div class="container">
             <div class="caption-wrapper">

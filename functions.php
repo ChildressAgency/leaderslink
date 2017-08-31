@@ -45,7 +45,7 @@ function leaderslink_scripts(){
 
   wp_register_script(
     'parallax',
-    get_template_directory_uri() . '/js/parallax.min.js',
+    get_template_directory_uri() . '/js/jquery.stellar.min.js',
     array('jquery'),
     '',
     true
