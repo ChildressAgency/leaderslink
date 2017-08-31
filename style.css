@@ -261,6 +261,8 @@ a:focus{
   min-height:350px;
   position:relative;
   padding-top:94px;
+  background-repeat:no-repeat; 
+  background-size:cover; 
 }
 span.header-cheat{
   display:block;
@@ -446,6 +448,9 @@ span.header-cheat{
   min-height:355px;
   display:table;
   width:100%;
+  background-repeat:no-repeat; 
+  background-size:cover;
+  background-attachment:fixed;
 }
 #testimonials>.container{
   display:table-cell;
@@ -1049,7 +1054,6 @@ hr{
 .ap-cradit{
   display:none !important;
 }
-
 
 @media (max-width:767px){
   .hero{

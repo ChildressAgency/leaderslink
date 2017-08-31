@@ -8,6 +8,8 @@ jQuery(document).ready(function($){
     }
   });
 
+  $(window).stellar();
+
   if(typeof $.fn.lightSlider == 'function'){
     $('#sliderBar .slider-bar').lightSlider({
       item:3,

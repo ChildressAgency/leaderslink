@@ -1,5 +1,5 @@
   <?php if(have_rows('testimonials', 'option')): ?>
-    <section id="testimonials" class="parallax-window" data-parallax="scroll" data-image-src="<?php the_field('testimonials_background_image', 'option'); ?>"<?php if(get_field('testimonials_background_image_height', 'option')){ echo ' data-natural-height="' . the_field('testimonials_background_image_height', 'option') . '"'; } ?><?php if(get_field('testimonials_background_image_position', 'option')){ echo ' data-position="' . the_field('testimonials_background_image_position') . '"'; } ?>>
+    <section id="testimonials" class="parallax-window" style="background-image:url(<?php the_field('testimonials_background_image', 'option'); ?>); <?php the_field('testimonials_background_image_css', 'option'); ?>">
       <div class="overlay"></div>
       <div class="container">
         <ul id="testimonialSlider">
