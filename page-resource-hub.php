@@ -3,7 +3,7 @@
   <section class="main-content">
     <div class="container">
       <div class="page-intro">
-        <h1><?php echo get_field('page_title') ? get_field('page_title') : get_the_title(); ?></h1>
+        <h1><?php echo get_field('page_title') ? get_field('page_title') : ''; ?></h1>
         <?php if(get_field('intro_text')): ?>
           <?php the_field('intro_text'); ?>
         <?php endif; ?>

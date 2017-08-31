@@ -454,3 +454,153 @@ add_action('acf/init', 'leaderslink_acf_init');
 function leaderslink_acf_init(){
 	acf_update_setting('google_api_key', get_field('google_maps_api_key', 'option'));
 }
+
+/******************************
+* ask question button widget
+******************************/
+add_action('widgets_init', 'leaderslink_load_widget');
+function leaderslink_load_widget(){
+	register_widget('leaderslink_ask_button_widget');
+}
+
+class leaderslink_ask_button_widget extends WP_Widget{
+	function __construct(){
+		parent::__construct(
+			'leaderslink_ask_button_widget',
+			__('Ask Question Button', 'leaderslink_widget_domain'),
+			array('description' => __('Show Ask a Question button', 'leaderslink_widget_domain'))
+		);
+	}
+
+	public function widget($args, $instance){
+		$title = apply_filters('widget_title', $instance['title']);
+
+		echo $args['before_widget'];
+		if(!empty($title)){
+			echo $args['before_title'] . $title . $args['after_title'];
+		}
+
+		ap_ask_btn();
+
+		echo $args['after_widget'];
+	}
+
+	public function form($instance){
+		if(isset($instance['title'])){
+			$title = $instance['title'];
+		}
+		else{
+			$title = __('New title', 'leaderslink_widget_domain');
+		}
+	?>
+		<p>
+			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:'); ?></label>
+			<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" />
+		</p>
+	<?php
+	}
+
+	public function update($new_instance, $old_instance){
+		$instance = array();
+		$instance['title'] = (!empty($new_instance['title'])) ? strip_tags($new_instance['title']) : '';
+		return $instance;
+	}
+}
+/*******************************
+* end ask question button widget
+********************************/
+
+add_filter('gettext', 'leaderslink_replace_ask_btn_text');
+function leaderslink_replace_ask_btn_text($text){
+	if($text == 'Ask question'){
+		$text = 'Ask A Question';
+	}
+	elseif($text == 'Sorry! you are not allowed to read this question.'){
+		$text = '<p class="text-center">You must be logged in to view this page.</p>';
+		$text .= ap_get_template_part('login-signup');
+	}
+	return $text;
+}
+
+add_filter('ap_display_question_metas', 'leaderslink_question_metas');
+function leaderslink_question_metas($metas, $question_id = false){
+	if($question_id == false){
+		$question_id = get_the_ID();
+	}
+	//$metas['solved'] = '';
+	//$metas['views'] = '';
+	//$metas['active'] = '';
+	//$metas['history'] = '';
+	//$metas['categories'] = '';
+
+	unset($metas);
+
+	$meta_categories = ap_question_categories_html(array('label' => ''));
+
+	$last_active = ap_get_last_active($question_id);
+	$metas['meta'] = '<p class="question-meta">Posted under ' . $meta_categories . ' - <span>Last Updated '. $last_active . '</span></p>';
+
+	return $metas;
+}
+
+// wordpress login page css
+add_action( 'login_enqueue_scripts', 'leaderslink_custom_login_css' );
+function leaderslink_custom_login_css() { ?>
+	<style type="text/css">
+		body.login{
+			background-color:#fff;
+		}
+    #login h1 a, .login h1 a {
+      background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/logo-white-bg.png);
+			height:62px;
+			width:100%;
+			max-width:245px;
+			background-size: contain;
+			background-repeat: no-repeat;
+     	padding-bottom: 30px;
+		}
+		#loginform{
+			border:1px solid #ddd;
+		}
+		#loginform input[type="text"],
+		#loginform input[type="password"]{
+			background-color:transparent;
+			border-color:#666;
+			color:#666;
+		}
+		#loginform label{
+			color:#000;
+		}
+		#loginform input[type="submit"]{
+			background-color:#267fae;
+			border-color:#267fae;
+			box-shadow:none;
+			border-radius:0;
+			-webkit-transition:all .3s ease;
+			transition:all .3s ease;
+		}
+		#loginform input[type="submit"]:hover{
+			background-color:#3a5a99;
+			border-color:#3a5a99;
+		}
+  </style>
+<?php }
+
+function leaderslink_add_video_iframe_attr($video_iframe){
+	// use preg_match to find iframe src
+	preg_match('/src="(.+?)"/', $video_iframe, $matches);
+	$src = $matches[1];
+
+	// add extra params to iframe src
+	$params = array(
+			//'controls'    => 0,
+			//'hd'        => 1,
+			//'autohide'    => 1
+			'rel' => 0
+	);
+
+	$new_src = add_query_arg($params, $src);
+
+	$video_iframe = str_replace($src, $new_src, $video_iframe);	
+	return $video_iframe;
+}
