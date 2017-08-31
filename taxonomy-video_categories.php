@@ -16,7 +16,8 @@
             <div class="embed-responsive embed-responsive-16by9">
               <?php 
                 $featured_video_id = get_field('featured_video', $videos_page_id);
-                the_field('video', $featured_video_id);
+                $video_iframe = get_field('video', $featured_video_id);
+                echo leaderslink_add_video_iframe_attr($video_iframe);
               ?>
             </div>
           </div>

@@ -14,7 +14,10 @@
           </div>
         <?php endif; ?>
         <div class="embed-responsive embed-responsive-16by9">
-          <?php the_field('video'); ?>
+          <?php 
+            $video_iframe = get_field('video'); 
+            echo leaderslink_add_video_iframe_attr($video_iframe);
+          ?>
         </div>
         <h1 class="text-center"><?php the_title(); ?></h1>
         <?php the_content(); ?>
