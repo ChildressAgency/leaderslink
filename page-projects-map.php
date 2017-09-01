@@ -60,7 +60,8 @@
         if($projects->have_posts()): ?>
           <div class="clearfix"></div>
           <div class="row">
-            <?php while($projects->have_posts()): $projects->the_post(); ?>
+            <?php $y=0; while($projects->have_posts()): $projects->the_post(); ?>
+              <?php if($y%2==0){ echo '<div class="clearfix"></div>'; } ?>
               <div class="col-sm-6">
                 <div class="project-block">
                   <h3><?php the_field('city_state'); ?><span><?php the_field('disaster_name'); ?></span></h3>
@@ -68,7 +69,7 @@
                   <a href="<?php the_permalink(); ?>" class="read-more">more...</a>
                 </div>
               </div>
-            <?php endwhile; ?>
+            <?php $y++; endwhile; ?>
           </div>
       <?php endif; wp_pagenavi(array('query' => $projects)); wp_reset_postdata(); ?>
     </div>
