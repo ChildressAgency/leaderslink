@@ -36,7 +36,7 @@
                   </div>
                   <div class="map-info-window-body">
                     <h2><?php the_field('disaster_name'); ?></h2>
-                    <?php the_excerpt(); ?>
+                    <?php the_field('map_summary'); ?>
                     <a href="<?php the_permalink(); ?>" class="read-more">more...</a>
                   </div>
                   <div class="map-info-window-gradient"></div>
