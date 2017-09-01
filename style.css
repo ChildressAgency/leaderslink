@@ -217,7 +217,7 @@ a:focus{
 .navbar-nav>li>a:hover,
 .navbar-nav>li>a:focus{
   background-color:transparent;
-  color:#dadada;
+  color:#aaa;
 }
 .navbar-toggle{
   border-color:#267fae;
@@ -501,6 +501,8 @@ span.header-cheat{
 .signup-form .btn-main{
   font-weight:300;
   padding:3px 70px;
+  display:block;
+  float:right;
 }
 
 footer{
@@ -1510,7 +1512,10 @@ hr{
 
 @media (max-width:767px){
   .hero{
-    padding-top:144px;
+    /*padding-top:144px;*/
+  }
+  .hero.hp-hero{
+    padding-top:0;
   }
   span.header-cheat{
     height:144px;
@@ -1526,7 +1531,7 @@ hr{
     padding-top:0;
   }
   .hero .caption>p{
-    font-size:44px;
+    font-size:36px;
     letter-spacing:0px;
     line-height:1em;
     text-align:center;
@@ -1551,6 +1556,13 @@ hr{
   }
   #testimonialSlider .testimonial-author{
     font-size:20px;
+  }
+  .header-logo>img{
+    float:left;
+    max-width:220px;
+  }
+  .navbar-toggle{
+    margin-right:0;
   }
 }
 @media (min-width:768px){

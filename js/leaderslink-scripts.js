@@ -21,6 +21,8 @@ jQuery(document).ready(function($){
       auto:true,
       pauseOnHover:true,
       pager:false,
+      keyPress:true,
+      pause:sliderPause,
       responsive:[
         {
           breakpoint:991,
@@ -46,7 +48,7 @@ jQuery(document).ready(function($){
       pauseOnHover:true,
       keyPress:true,
       adaptiveHeight:true,
-      pause:5000,
+      pause:sliderPause,
       onAfterSlide:function(el){
         $(window).trigger('resize').trigger('scroll');
       }

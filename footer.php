@@ -44,6 +44,7 @@
                   <li><a href="<?php echo home_url('elected-officials'); ?>">Elected Officials</a></li>
                   <li><a href="<?php echo home_url('disaster-experts'); ?>">Disaster Experts</a></li>
                   <li><a href="<?php echo home_url('supporters'); ?>">Supporters</a></li>
+                  <li><a href="<?Php echo home_url('questions'); ?>">Brainstorming Chamber</a></li>
                 </ul>
               </li>
               <li>
@@ -90,6 +91,9 @@
         </div>
       </div>
     </footer>
+    <script>
+      var sliderPause = <?php echo (get_field('slider_pause', 'option') * 1000); ?>;
+    </script>
     <?php wp_footer(); ?>
   </body>
 </html>
