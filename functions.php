@@ -70,8 +70,10 @@ function leaderslink_scripts(){
   
   wp_enqueue_script('bootstrap-script');
   wp_enqueue_script('fontawesome');
-  wp_enqueue_script('lightslider');
-  wp_enqueue_script('parallax');
+	wp_enqueue_script('lightslider');
+	if(!get_field('use_css_parallax', 'option')){
+		wp_enqueue_script('parallax');
+	}
 	if(is_page('projects-map')){
 		wp_enqueue_script('google-maps');
 	}
@@ -617,7 +619,7 @@ function leaderslink_add_video_iframe_attr($video_iframe){
 
 add_action( 'template_redirect', 'leaderslink_ap_page_template_redirect' );
 function leaderslink_ap_page_template_redirect(){
-  if( is_ask() && ! is_user_logged_in() ){
+  if(is_ask() && !is_user_logged_in() ){
     auth_redirect();
     exit();
   }

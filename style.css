@@ -1510,6 +1510,37 @@ hr{
   font-style:italic;
 }
 
+.sponsorship{
+  margin-top:40px;
+  text-align:center;
+  font-size:18px;
+}
+.sponsorship>a{
+  font-size:18px;
+}
+
+.site-message{
+  background-color:#ed0000;
+  padding-top:3px;
+  padding-bottom:3px;
+}
+.site-message>h1{
+  color:#fff;
+  font-size:30px;
+  font-variant:normal;
+  text-transform:uppercase;
+  text-align:center;
+}
+.site-message>h1>a{
+  color:#fff;
+  font-size:30px;
+}
+.site-message>h1>a:hover,
+.site-message>h1>a:focus{
+  color:#fff;
+  text-decoration:underline;
+}
+
 @media (max-width:767px){
   .hero{
     /*padding-top:144px;*/

@@ -2,7 +2,12 @@
 <main id="main">
   <section id="latestArticles">
     <div class="container">
-      <h1><?php echo get_field('page_intro_title') ? get_field('page_intro_title') : 'Latest Articles'; ?></h1>
+      <div class="page-intro">
+        <h1><?php echo get_field('page_title') ? get_field('page_title') : 'Latest Articles'; ?></h1>
+        <?php if(get_field('intro_text')): ?>
+          <?php the_field('intro_text'); ?>
+        <?php endif; ?>
+      </div>
       <div class="filtering dropdown">
         <?php $article_cats = get_terms('article_categories'); ?>
         <button class="btn-filter dropdown-toggle" type="button" id="filter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Filter By <i class="fa fa-angle-down"></i></button>

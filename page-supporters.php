@@ -16,7 +16,7 @@
             <h1>Individuals</h1>
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/individual-icon.png" class="img-responsive center-block" alt="Individual Donation Icon" />
             <p><?php the_field('individual_donation_text'); ?></p>
-            <a href="<?php the_field('individual_donation_link'); ?>" class="btn-main btn-red">Donate Now</a>
+            <a href="<?php the_field('individual_donation_link'); ?>" class="btn-main btn-red visible-xs-inline-block">Donate Now</a>
           </div>
         </div>
         <div class="col-sm-6">
@@ -24,10 +24,19 @@
             <h1>Organizations</h1>
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/organizations-icon.png" class="img-responsive center-block" alt="Organizations Donation Icon" />
             <p><?php the_field('organization_donation_text'); ?></p>
-            <a href="<?php the_field('organization_donation_link'); ?>" class="btn-main btn-red">Donate Now</a>
+            <a href="<?php the_field('organization_donation_link'); ?>" class="btn-main btn-red visible-xs-inline-block">Donate Now</a>
           </div>
         </div>
       </div>
+      <div class="row hidden-xs text-center">
+        <div class="col-sm-6">
+          <a href="<?php the_field('individual_donation_link'); ?>" class="btn-main btn-red hidden-xs">Donate Now</a>
+        </div>
+        <div class="col-sm-6">
+          <a href="<?php the_field('organization_donation_link'); ?>" class="btn-main btn-red hidden-xs">Donate Now</a>
+        </div>
+      </div>
+      <p class="sponsorship">For sponsorship information, contact founder <a href="mailto:kathleenkoch@leaderslink.com">Kathleen Koch</a>.</p>
     </div>
   </section>
   <?php if(get_field('grey_callout_text')): ?>

@@ -88,9 +88,14 @@
             <?php } ?>
         </div>
       </div>
+        <?php if(get_field('site_message', 'option')): ?>
+          <div class="site-message">
+            <h1><a href="<?php the_field('site_message_link', 'option'); ?>"><?php the_field('site_message', 'option'); ?></a></h1>
+          </div>
+        <?php endif; ?>
     </nav>
     <?php if(get_field('header_image')): ?>
-      <section class="hero<?php if(is_front_page()){ echo ' hp-hero'; } ?> parallax-window" data-stellar-background-ratio="0.2" style="background-image:url(<?php the_field('header_image'); ?>); <?php the_field('header_image_css'); ?>">
+      <section class="hero<?php if(is_front_page()){ echo ' hp-hero'; } ?> parallax-window" data-stellar-background-ratio=".2" style="background-image:url(<?php the_field('header_image'); ?>); <?php the_field('header_image_css'); ?><?php if(get_field('use_css_parallax', 'option')){ echo ' background-attachment:fixed;'; } ?>">
         <?php if(get_field('header_title')): ?>
           <div class="container">
             <div class="caption-wrapper">
