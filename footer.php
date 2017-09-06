@@ -86,6 +86,7 @@
           </div>
         </div>
         <div class="copyright">
+          <p>By continuing to use this website, you agree to our <a href="<?php echo home_url('privacy-policy-terms-of-use-and-disclaimer'); ?>">Privacy Policy, Terms of Use and Disclaimer</a>.</p>
           <p>&copy<?php echo date('Y'); ?> LeadersLink</p>
           <p>website created by <a href="https://childressagency.com">The Childress Agency</a></p>
         </div>
