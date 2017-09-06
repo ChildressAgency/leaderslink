@@ -16,10 +16,17 @@
             <h2>MAILING</h2>
             <p>LeadersLink<br /><?php the_field('street_address'); ?><br /><?php the_field('city_state_zip'); ?></p>
           </div>
-          <div class="contact-info">
-            <h2>HELP HOTLINE</h2>
-            <p><?php the_field('help_hotline_number'); ?><br /><?php the_field('help_hotline_hours'); ?><br /><?php the_field('help_hotline_email'); ?></p>
-          </div>
+          <?php if(get_field('help_hotline_number')): ?>
+            <div class="contact-info">
+              <h2>HELP HOTLINE</h2>
+              <p><?php the_field('help_hotline_number'); ?><br /><?php the_field('help_hotline_hours'); ?><br /><?php the_field('help_hotline_email'); ?></p>
+            </div>
+          <?php else: ?>
+            <div class="contact-info">
+              <h2>EMAIL</h2>
+              <p><?php the_field('help_hotline_email'); ?></p>
+            </div>
+          <?php endif; ?>
           <div class="contact-info social-links">
             <h2>SOCIAL MEDIA</h2>
             <?php if(get_field('facebook', 'option')): ?>

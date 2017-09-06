@@ -55,6 +55,15 @@ jQuery(document).ready(function($){
         $(window).trigger('resize').trigger('scroll');
       }
     });
+
+    $('.collapse').on('shown.bs.collapse', function(){
+      var offset = $('.panel.panel-default>.panel-collapse.in').offset();
+      if(offset){
+        $('html, body').animate({
+          scrollTop: $('.panel-title a').offset().top -90
+        }, 500);
+      }
+    });
   }
 
   $('#faqs').on('shown.bs.collapse', function(){
