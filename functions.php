@@ -525,7 +525,7 @@ class leaderslink_ask_button_widget extends WP_Widget{
 add_filter('gettext', 'leaderslink_replace_ask_btn_text');
 function leaderslink_replace_ask_btn_text($text){
 	if($text == 'Ask question'){
-		$text = 'Ask A Question';
+		$text = 'Ask A Question /<br />Give Advice';
 	}
 	elseif($text == 'Sorry! you are not allowed to read this question.'){
 		$text = '<p class="text-center">You must be logged in to view this page.</p>';
@@ -553,6 +553,14 @@ function leaderslink_question_metas($metas, $question_id = false){
 	$metas['meta'] = '<p class="question-meta">Posted under ' . $meta_categories . ' - <span>Last Updated '. $last_active . '</span></p>';
 
 	return $metas;
+}
+
+add_filter('ap_ask_form_fields', 'leaderslink_ask_form_fields');
+function leaderslink_ask_form_fields($fields, $editing = false){
+	//print_r($fields);
+	$fields['fields'][0]['placeholder'] = 'Question or advice in one sentence';
+	$fields['fields'][6]['desc'] = 'Select a topic that best fits your question or advice.';
+	return $fields;
 }
 
 // wordpress login page css

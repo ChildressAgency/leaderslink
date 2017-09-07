@@ -1077,7 +1077,7 @@ hr{
   display:none;
 }
 #anspress .ap-list-head .ap-btn-ask{
-  display:none;
+  /*display:none;*/
 }
 .ap-form-input{
   color:#666;
@@ -1086,7 +1086,8 @@ hr{
   border-radius:0 !important;
 }
 .ap-btn,
-.ap-btn-ask{
+.ap-btn-ask,
+#anspress .ap-list-head .ap-btn-ask{
   font-size:18px;
   text-transform:uppercase;
   border:1px solid #3a5a99;
@@ -1100,6 +1101,11 @@ hr{
   border-radius:0;
   display:inline-block;
 }
+#anspress .ap-list-head .ap-btn-ask{
+  background-color:#ed0000;
+  height:auto;
+  text-align:center;
+}
 .ap-display-meta-item.subscribe .ap-btn-subscribe{
   font-size:12px;
   background-color:#3a5a99;
@@ -1109,7 +1115,9 @@ hr{
 .ap-btn:hover,
 .ap-btn:focus,
 .ap-btn-ask:hover,
-.ap-btn-ask:focus{
+.ap-btn-ask:focus,
+#anspress .ap-list-head .ap-btn-ask:hover,
+#anspress .ap-list-head .ap-btn-ask:focus{
   color:#fff;
   text-decoration:none;
   background-color:#267fae;
