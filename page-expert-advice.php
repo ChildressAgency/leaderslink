@@ -23,7 +23,7 @@
         <?php
           $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
           $articles = new WP_Query(array(
-            'post_type' => 'expertadvice_articles',
+            'post_type' => 'expertadvice_article',
             'posts_per_page' => 9,
             'paged' => $paged
           ));
@@ -35,9 +35,10 @@
                   <img src="<?php the_field('featured_image'); ?>" class="img-responsive center-block" alt="" />
                 <?php else: 
                   //wp_get_attachment_image(get_queried_object_id(), 'full', '', array('class' => 'img-responsive center-block'));
-                  $terms = wp_get_post_terms(get_the_ID(), 'expertadvice_articles');
+                  $terms = get_the_terms(get_the_ID(), 'article_categories');
+                  //var_dump($terms);
                   $term = $terms[0]; ?>
-                  <img src="<?php the_field('category_image', 'article_category_' . $term->term_id); ?>" class="img-responsive center-block" alt="" />
+                  <img src="<?php the_field('category_image', 'article_categories_' . $term->term_id); ?>" class="img-responsive center-block" alt="" />
                 <?php endif; ?>
                 <h2><?php the_title(); ?></h2>
                 <?php the_excerpt(); ?>

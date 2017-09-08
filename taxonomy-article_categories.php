@@ -2,7 +2,10 @@
 <main id="main">
   <section id="latestArticles">
     <div class="container">
-      <h1><?php echo get_field('page_intro_title') ? get_field('page_intro_title') : 'Latest Articles'; ?></h1>
+      <div class="page-intro">
+        <?php $cur_term = get_term_by('slug', get_query_var('term'), get_query_var('taxonomy')); ?>
+        <h1>Latest Articles - <?php echo $cur_term->name; ?></h1>
+      </div>
       <div class="filtering dropdown">
         <?php $article_cats = get_terms('article_categories'); ?>
         <button class="btn-filter dropdown-toggle" type="button" id="filter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Filter By <i class="fa fa-angle-down"></i></button>
@@ -21,7 +24,7 @@
           $cat_name = $category->name;
           $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
           $articles = new WP_Query(array(
-            'post_type' => 'expertadvice_articles',
+            'post_type' => 'expertadvice_article',
             'posts_per_page' => 9,
             'paged' => $paged,
             'tax_query' => array(
@@ -39,8 +42,11 @@
                 <?php if(get_field('featured_image')): ?>
                   <img src="<?php the_field('featured_image'); ?>" class="img-responsive center-block" alt="" />
                 <?php else: 
-                  wp_get_attachment_image(get_queried_object_id(), 'full', '', array('class' => 'img-responsive center-block'));
-                endif; ?>
+                  //wp_get_attachment_image(get_queried_object_id(), 'full', '', array('class' => 'img-responsive center-block'));
+                  $terms = get_the_terms(get_the_ID(), 'article_categories');
+                  $term = $terms[0]; ?>
+                  <img src="<?php the_field('category_image', 'article_categories_' . $term->term_id); ?>" class="img-responsive center-block" alt="" />
+                <? endif; ?>
                 <h2><?php the_title(); ?></h2>
                 <?php the_excerpt(); ?>
                 <a href="<?php the_permalink(); ?>">more...</a>
