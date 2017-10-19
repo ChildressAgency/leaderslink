@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <main id="main">
-  <?php if(get_field('featured_video')): ?>
+  <?php if(get_field('featured_video') || get_field('featured_video_text')): ?>
     <section id="featuredVideo">
       <div class="container">
         <div class="row">
@@ -13,7 +13,9 @@
               <?php 
                 $featured_video_id = get_field('featured_video');
                 $video_iframe = get_field('video', $featured_video_id);
-                echo leaderslink_add_video_iframe_attr($video_iframe);
+                if($video_iframe){
+                  echo leaderslink_add_video_iframe_attr($video_iframe);
+                }
               ?>
             </div>
           </div>
